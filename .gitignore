@@ -1,0 +1,4 @@
+*.box
+.vagrant
+.bundle
+packer_cache
