@@ -1,6 +1,16 @@
 {
   "provisioners": [
     {
+      "type": "file",
+      "source": "files/media.repo",
+      "destination": "/tmp/media.repo"
+    },
+    {
+      "type": "file",
+      "source": "files/CentOS-Base.repo",
+      "destination": "/tmp/CentOS-Base.repo"
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
@@ -50,7 +60,7 @@
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "512" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
       ],
       "headless": "true"
