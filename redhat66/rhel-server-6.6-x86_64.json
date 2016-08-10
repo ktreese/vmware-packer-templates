@@ -21,7 +21,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "redhat-6-6-x64-virtualbox.box"
+          "output": "wwt-rhel-6-6-x64-virtualbox.box"
         }
       }
     }
