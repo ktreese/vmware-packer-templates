@@ -3,9 +3,9 @@
 Builds a vagrant box for the virtualbox provider for specified os type:
 
 ##### Quick and dirty example usage:
-`packer validate redhat72.json` to validate template syntax
+`packer validate rhel-server-7.2-x86_64.json` to validate template syntax
 
-`packer build redhat72.json` to build a RedHat 7 vagrant box
+`packer build rhel-server-7.2-x86_64.json` to build a RedHat 7 vagrant box
 
 `add.sh` to add vagrant box
 
@@ -16,7 +16,7 @@ Builds a vagrant box for the virtualbox provider for specified os type:
 
 # Example Run
 ```
-➜  redhat7 git:(master) packer build redhat72.json 
+➜  redhat7 git:(master) packer build rhel-server-7.2-x86_64.json 
 virtualbox-iso output will be in this color.
 
 ==> virtualbox-iso: Downloading or copying Guest additions
