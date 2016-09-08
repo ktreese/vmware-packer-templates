@@ -1,0 +1,27 @@
+[CentOS]
+name=CentOS for RHEL Vagrant VM
+baseurl=http://mirror.centos.org/centos/6/os/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://mirror.centos.org/centos//RPM-GPG-KEY-CentOS-6
+
+[updates]
+name=CentOS 6.5 Updates
+baseurl=http://vault.centos.org/6.5/updates/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://vault.centos.org//RPM-GPG-KEY-CentOS-6
+
+[extras]
+name=CentOS 6.5 Extras
+baseurl=http://vault.centos.org/6.5/extras/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://vault.centos.org//RPM-GPG-KEY-CentOS-6
+
+[centosplus]
+name=CentOS 6.5 Extras
+baseurl=http://vault.centos.org/6.5/centosplus/$basearch/
+enabled=1
+gpgcheck=1
+gpgkey=http://vault.centos.org//RPM-GPG-KEY-CentOS-6
