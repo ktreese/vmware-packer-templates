@@ -1,0 +1,15 @@
+---
+# This is a temporary config for inital vagrant builds
+# Once vagrant is up, the pe_r10k classification takes
+# over the r10k setup and configuration file
+cachedir: /opt/puppetlabs/server/data/puppetserver/r10k
+sources:
+  puppetry:
+    basedir: /etc/puppetlabs/code/environments
+    remote: git@github.wwt.com:puppetry/wwt-puppet-control.git
+
+
+git:
+    private_key: /home/pe-git/.ssh/id_rsa
+    provider: rugged
+    username: pe-git

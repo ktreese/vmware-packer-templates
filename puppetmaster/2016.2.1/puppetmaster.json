@@ -11,6 +11,21 @@
       "destination": "/tmp/CentOS-Base.repo"
     },
     {
+      "type": "file",
+      "source": "files/r10k.yaml",
+      "destination": "/tmp/r10k.yaml"
+    },
+    {
+      "type": "file",
+      "source": "files/eyaml_keys/",
+      "destination": "/tmp"
+    },
+    {
+      "type": "file",
+      "source": "files/github/",
+      "destination": "/tmp"
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
