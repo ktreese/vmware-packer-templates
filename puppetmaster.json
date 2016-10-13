@@ -17,6 +17,11 @@
     },
     {
       "type": "file",
+      "source": "files/hiera.yaml",
+      "destination": "/tmp/hiera.yaml"
+    },
+    {
+      "type": "file",
       "source": "files/eyaml_keys/",
       "destination": "/tmp"
     },
@@ -73,7 +78,7 @@
       "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
       "virtualbox_version_file": ".vbox_version",
       "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "2048" ],
+        [ "modifyvm", "{{.Name}}", "--memory", "2560" ],
         [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
       ],
       "headless": "true"

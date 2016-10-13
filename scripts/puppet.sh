@@ -1,3 +1,15 @@
+run_puppet() {
+  # Run of Puppet configuration client already in progress; waiting 5 seconds until retry
+  while :
+  do
+   if [ ! -f /opt/puppetlabs/puppet/cache/state/agent_catalog_run.lock ]; then
+     /usr/local/bin/puppet agent -t
+     break
+   fi
+   sleep 5
+  done
+}
+
 curl -o /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz https://s3.amazonaws.com/pe-builds/released/2016.2.1/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz
 tar zxvf /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz
 /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64/puppet-enterprise-installer -c /tmp/puppetmaster.conf
@@ -6,7 +18,7 @@ tar zxvf /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz
 echo '*' >> /etc/puppetlabs/puppet/autosign.conf
 
 # Invoke 1st puppet run to complete the install
-/usr/local/bin/puppet agent -t
+run_puppet
 
 # Update r10k & Install ruby gems for classifications.rb (refer wwt-puppet-control production branch in scripts dir)
 /opt/puppetlabs/puppet/bin/gem update r10k
@@ -23,6 +35,10 @@ echo '*' >> /etc/puppetlabs/puppet/autosign.conf
 
 # Copy temp r10k.yaml in order to deploy production; subsequent puppet run will overwrite via pe_r10k classification
 /bin/mv /tmp/r10k.yaml /etc/puppetlabs/r10k/r10k.yaml
+/bin/mv /tmp/hiera.yaml /etc/puppetlabs/puppet/hiera.yaml
+
+# Restart pe-puppetserver for hiera update to take effect
+/sbin/service pe-puppetserver restart
 
 # Deploy production and vgt environments to puppetmaster
 /usr/local/bin/r10k deploy environment production -pv -c /etc/puppetlabs/r10k/r10k.yaml
@@ -30,16 +46,8 @@ echo '*' >> /etc/puppetlabs/puppet/autosign.conf
 # Import classifications from MongoDB
 /opt/puppetlabs/puppet/bin/ruby /etc/puppetlabs/code/environments/production/scripts/classifications.rb -i
 
-# Invoke 2nd puppet run to setup hiera and tune JVM for low memory vagrant VM
-# Run of Puppet configuration client already in progress; waiting 5 seconds until retry
-while :
-do
- if [ ! -f /opt/puppetlabs/puppet/cache/state/agent_catalog_run.lock ]; then
-   /usr/local/bin/puppet agent -t
-   break
- fi
- sleep 5
-done
+# Invoke 2nd puppet run to setup hiera, the pe_repos, and tune JVM for low memory vagrant VM
+run_puppet
 
 # profile::wwt_hiera generates keys upon force puppet run above; trash these
 # copy insecure vagrant eyaml private/public keys
