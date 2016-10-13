@@ -1,9 +1,0 @@
-[InstallMedia]
-name=Red Hat Enterprise Linux 7.2
-mediaid=1446216863.790260
-metadata_expire=-1
-gpgcheck=1
-cost=500
-enabled=0
-baseurl=file:///mnt/
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
