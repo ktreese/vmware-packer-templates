@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure(2) do |config|
-  config.vm.define "redhat72" do |redhat|
+  config.vm.define "redhat7" do |redhat|
     redhat.vm.box = "wwt/rhel-server-7.2-x86_64"
     redhat.vm.hostname = "redhat"
 
