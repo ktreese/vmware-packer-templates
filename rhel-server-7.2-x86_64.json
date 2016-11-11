@@ -1,16 +1,6 @@
 {
   "provisioners": [
     {
-      "type": "file",
-      "source": "files/media.repo",
-      "destination": "/tmp/media.repo"
-    },
-    {
-      "type": "file",
-      "source": "files/CentOS-Base.repo",
-      "destination": "/tmp/CentOS-Base.repo"
-    },
-    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "override": {
