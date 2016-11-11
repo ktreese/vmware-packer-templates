@@ -7,11 +7,6 @@
     },
     {
       "type": "file",
-      "source": "files/CentOS-Base.repo",
-      "destination": "/tmp/CentOS-Base.repo"
-    },
-    {
-      "type": "file",
       "source": "files/r10k.yaml",
       "destination": "/tmp/r10k.yaml"
     },
