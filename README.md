@@ -2,6 +2,17 @@
 
 Builds a vagrant box for the virtualbox provider for specified os type:
 
+##### Branch Descriptions
+Each branch represents the OS it is named after.  Following the quick and dirty example usage below will build a vagrant box for the os the branch represents.  Otherwise, here are some specifics as they pertain to certain branches:
+
+developer: Builds Red Hat 6.7 and registers with the redhat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.
+
+master: Contains just the README for now.  Each branch is intended to be long lived for the OS build is represents
+
+pe.2016.2.1.entitlement: First build of a puppet master using an entitlement.  This completely removes the dependency on using CentOS repos for package installs.  Use of Red Hat Customer Portal is being tested before this gets merged into pe.2016.2.1 and published for public consumption within the wwt-pe-master-vagrant project
+
+pe.2016.2.1_raw: A base installation/setup of Puppet Enterprise 2016.2.1 without any custom WWT configs built in
+
 ##### Quick and dirty example usage:
 `packer validate rhel-server-7.2-x86_64.json` to validate template syntax
 
