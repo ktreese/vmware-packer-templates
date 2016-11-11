@@ -11,7 +11,6 @@ Vagrant.configure(2) do |config|
     end
 
     # Specify box and assign a hostname
-    #puppetmaster.vm.box_url = "http://vagrant.wwt.com/wwt-puppetmaster-rhel-6-7-x64-virtualbox.box"
     puppetmaster.vm.box = "wwt/2016pemaster"
     puppetmaster.vm.hostname = "puppetmaster"
 

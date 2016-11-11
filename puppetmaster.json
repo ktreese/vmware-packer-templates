@@ -47,7 +47,7 @@
       "type": "vagrant",
       "override": {
         "virtualbox": {
-          "output": "wwt-puppetmaster-2016.2.1-rhel-6-7-x64-virtualbox.box"
+          "output": "wwt-puppetmaster-2016.2.1-rhel-6-x64-virtualbox.box"
         }
       }
     }
