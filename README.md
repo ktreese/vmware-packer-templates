@@ -5,29 +5,26 @@ Builds a vagrant box for the virtualbox provider for specified os type:
 ##### Branch Descriptions
 Each branch represents the OS it is named after.  Following the quick and dirty example usage below will build a vagrant box for the os the branch represents.  Otherwise, here are some specifics as they pertain to certain branches:
 
-developer: Builds Red Hat 6.7 and registers with the redhat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.
+- `master:` Contains just the README for now.  Each branch is intended to be long lived for the OS build is represents
 
-master: Contains just the README for now.  Each branch is intended to be long lived for the OS build is represents
+- `developer:` Builds a Red Hat 6 virtualbox image based off a 6.7 ISO.  The build applies the latest available patches and package updates (including kernel revisions) via registration with the redhat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.  Once tested extensively, it will be merged into the `redhat6` branch
 
-pe.2016.2.1.entitlement: First build of a puppet master using an entitlement.  This completely removes the dependency on using CentOS repos for package installs.  Use of Red Hat Customer Portal is being tested before this gets merged into pe.2016.2.1 and published for public consumption within the wwt-pe-master-vagrant project
+- `pe.2016.2.1.entitlement:` First build of a puppet master using an entitlement.  This completely removes the dependency on using CentOS repos for package installs.  Use of Red Hat Customer Portal is being tested before this gets merged into `pe.2016.2.1` and published for public consumption within the wwt-pe-master-vagrant project
 
-pe.2016.2.1_raw: A base installation/setup of Puppet Enterprise 2016.2.1 without any custom WWT configs built in
+- `pe.2016.2.1_raw:` A base installation/setup of Puppet Enterprise 2016.2.1 without any custom WWT configs built in.  If developer builds above pan out, this will need a little refactoring to also register directly with Red Hat Customer Portal
 
 ##### Quick and dirty example usage:
-`packer validate rhel-server-7.2-x86_64.json` to validate template syntax
-
-`packer build rhel-server-7.2-x86_64.json` to build a RedHat 7 vagrant box
-
-`add.sh` to add vagrant box
-
-`vagrant up` to up the machine based of distributed Vagrantfile
-
-`vagrant ssh` to ssh into the vagrant machine
-
+```
+$ packer validate rhel-server-7-x86_64.json      validate template syntax
+$ packer build rhel-server-7-x86_64.json         build a RedHat 7 vagrant box
+$ add.sh                                         add vagrant box
+$ vagrant up                                     boot based of distributed Vagrantfile
+$ vagrant ssh                                    ssh into the vagrant machine
+```
 
 # Example Run
 ```
-➜  redhat7 git:(master) packer build rhel-server-7.2-x86_64.json 
+➜  packer-templates git:(master) packer build rhel-server-7-x86_64.json
 virtualbox-iso output will be in this color.
 
 ==> virtualbox-iso: Downloading or copying Guest additions
@@ -110,6 +107,6 @@ virtualbox-iso output will be in this color.
 Build 'virtualbox-iso' finished.
 
 ==> Builds finished. The artifacts of successful builds are:
---> virtualbox-iso: 'virtualbox' provider box: redhat-7-2-x64-virtualbox.box
-➜  redhat7 git:(master) 
+--> virtualbox-iso: 'virtualbox' provider box: redhat-7-x64-virtualbox.box
+➜  packer-templates git:(master)
 ```
