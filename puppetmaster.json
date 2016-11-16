@@ -1,4 +1,7 @@
 {
+  "variables": {
+    "submgr_pass": ""
+  },
   "provisioners": [
     {
       "type": "file",
