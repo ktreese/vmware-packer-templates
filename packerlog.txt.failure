@@ -1,0 +1,1399 @@
+2016/11/13 21:11:45 [INFO] Packer version: 0.11.0
+2016/11/13 21:11:45 Packer Target OS/Arch: darwin amd64
+2016/11/13 21:11:45 Built with Go Version: go1.7.3
+2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 Using internal plugin for parallels-pvm
+2016/11/13 21:11:45 Using internal plugin for qemu
+2016/11/13 21:11:45 Using internal plugin for virtualbox-ovf
+2016/11/13 21:11:45 Using internal plugin for amazon-ebs
+2016/11/13 21:11:45 Using internal plugin for azure-arm
+2016/11/13 21:11:45 Using internal plugin for openstack
+2016/11/13 21:11:45 Using internal plugin for parallels-iso
+2016/11/13 21:11:45 Using internal plugin for vmware-vmx
+2016/11/13 21:11:45 Using internal plugin for amazon-chroot
+2016/11/13 21:11:45 Using internal plugin for file
+2016/11/13 21:11:45 Using internal plugin for null
+2016/11/13 21:11:45 Using internal plugin for virtualbox-iso
+2016/11/13 21:11:45 Using internal plugin for vmware-iso
+2016/11/13 21:11:45 Using internal plugin for amazon-instance
+2016/11/13 21:11:45 Using internal plugin for digitalocean
+2016/11/13 21:11:45 Using internal plugin for docker
+2016/11/13 21:11:45 Using internal plugin for googlecompute
+2016/11/13 21:11:45 Using internal plugin for ansible-local
+2016/11/13 21:11:45 Using internal plugin for file
+2016/11/13 21:11:45 Using internal plugin for powershell
+2016/11/13 21:11:45 Using internal plugin for salt-masterless
+2016/11/13 21:11:45 Using internal plugin for shell
+2016/11/13 21:11:45 Using internal plugin for windows-restart
+2016/11/13 21:11:45 Using internal plugin for windows-shell
+2016/11/13 21:11:45 Using internal plugin for ansible
+2016/11/13 21:11:45 Using internal plugin for chef-client
+2016/11/13 21:11:45 Using internal plugin for chef-solo
+2016/11/13 21:11:45 Using internal plugin for puppet-masterless
+2016/11/13 21:11:45 Using internal plugin for puppet-server
+2016/11/13 21:11:45 Using internal plugin for shell-local
+2016/11/13 21:11:45 Using internal plugin for checksum
+2016/11/13 21:11:45 Using internal plugin for docker-import
+2016/11/13 21:11:45 Using internal plugin for docker-save
+2016/11/13 21:11:45 Using internal plugin for vsphere
+2016/11/13 21:11:45 Using internal plugin for vagrant
+2016/11/13 21:11:45 Using internal plugin for artifice
+2016/11/13 21:11:45 Using internal plugin for atlas
+2016/11/13 21:11:45 Using internal plugin for docker-push
+2016/11/13 21:11:45 Using internal plugin for docker-tag
+2016/11/13 21:11:45 Using internal plugin for vagrant-cloud
+2016/11/13 21:11:45 Using internal plugin for amazon-import
+2016/11/13 21:11:45 Using internal plugin for compress
+2016/11/13 21:11:45 Using internal plugin for googlecompute-export
+2016/11/13 21:11:45 Using internal plugin for shell-local
+2016/11/13 21:11:45 Using internal plugin for manifest
+2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 Attempting to open config file: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 [WARN] Config file doesn't exist: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[null:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null digitalocean:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean googlecompute:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute azure-arm:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm openstack:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack amazon-chroot:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot virtualbox-iso:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso docker:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker parallels-pvm:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm qemu:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu file:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file vmware-vmx:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx vmware-iso:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso amazon-instance:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance virtualbox-ovf:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf amazon-ebs:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs parallels-iso:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso] PostProcessors:map[docker-import:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import atlas:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-atlas docker-push:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push vagrant:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant amazon-import:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import checksum:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum artifice:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice docker-tag:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag vagrant-cloud:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud compress:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress docker-save:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save vsphere:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere googlecompute-export:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export shell-local:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local manifest:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest] Provisioners:map[windows-restart:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart ansible:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible chef-solo:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo shell-local:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local ansible-local:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local powershell:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell salt-masterless:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless shell:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell windows-shell:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell chef-client:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client puppet-masterless:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless puppet-server:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server file:/usr/local/Cellar/packer/0.11.0/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file]}
+2016/11/13 21:11:45 Setting cache directory: /Users/reesek/workspace/github-reesek/packer-templates/packer_cache
+2016/11/13 21:11:45 Loading builder: vmware-iso
+2016/11/13 21:11:45 Plugin could not be found. Checking same directory as executable.
+2016/11/13 21:11:45 Current exe path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Creating plugin client for path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Starting plugin: /usr/local/Cellar/packer/0.11.0/bin/packer []string{"/usr/local/Cellar/packer/0.11.0/bin/packer", "plugin", "packer-builder-vmware-iso"}
+2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 Waiting for RPC address for: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [INFO] Packer version: 0.11.0
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer Target OS/Arch: darwin amd64
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Built with Go Version: go1.7.3
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Attempting to open config file: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [WARN] Config file doesn't exist: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Setting cache directory: /Users/reesek/workspace/github-reesek/packer-templates/packer_cache
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 args: []string{"packer-builder-vmware-iso"}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin minimum port: 10000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin maximum port: 25000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin address: unix /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-plugin655634722
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Waiting for connection...
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Serving a plugin connection...
+2016/11/13 21:11:45 Loading provisioner: shell
+2016/11/13 21:11:45 Plugin could not be found. Checking same directory as executable.
+2016/11/13 21:11:45 Current exe path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Creating plugin client for path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Starting plugin: /usr/local/Cellar/packer/0.11.0/bin/packer []string{"/usr/local/Cellar/packer/0.11.0/bin/packer", "plugin", "packer-provisioner-shell"}
+2016/11/13 21:11:45 Waiting for RPC address for: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [INFO] Packer version: 0.11.0
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer Target OS/Arch: darwin amd64
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Built with Go Version: go1.7.3
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Attempting to open config file: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [WARN] Config file doesn't exist: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Setting cache directory: /Users/reesek/workspace/github-reesek/packer-templates/packer_cache
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 args: []string{"packer-provisioner-shell"}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin minimum port: 10000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin maximum port: 25000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin address: unix /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-plugin957040796
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Waiting for connection...
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Serving a plugin connection...
+2016/11/13 21:11:45 Loading post-processor: vsphere
+2016/11/13 21:11:45 Plugin could not be found. Checking same directory as executable.
+2016/11/13 21:11:45 Current exe path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Creating plugin client for path: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 Starting plugin: /usr/local/Cellar/packer/0.11.0/bin/packer []string{"/usr/local/Cellar/packer/0.11.0/bin/packer", "plugin", "packer-post-processor-vsphere"}
+2016/11/13 21:11:45 Waiting for RPC address for: /usr/local/Cellar/packer/0.11.0/bin/packer
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [INFO] Packer version: 0.11.0
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer Target OS/Arch: darwin amd64
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Built with Go Version: go1.7.3
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Attempting to open config file: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [WARN] Config file doesn't exist: /Users/reesek/.packerconfig
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Setting cache directory: /Users/reesek/workspace/github-reesek/packer-templates/packer_cache
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 args: []string{"packer-post-processor-vsphere"}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin minimum port: 10000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin maximum port: 25000
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Detected home directory from env var: /Users/reesek
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Plugin address: unix /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-plugin244606324
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Waiting for connection...
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Serving a plugin connection...
+2016/11/13 21:11:45 ui: [1;32mvmware-iso output will be in this color.[0m
+2016/11/13 21:11:45 ui: 
+2016/11/13 21:11:45 Build debug mode: false
+2016/11/13 21:11:45 Force build: false
+2016/11/13 21:11:45 On error: 
+2016/11/13 21:11:45 Preparing build: vmware-iso
+2016/11/13 21:11:45 ui: [1;32mWarnings for build 'vmware-iso':
+[0m
+2016/11/13 21:11:45 ui: [1;32m* A checksum type of 'none' was specified. Since ISO files are so big,
+a checksum is highly recommended.[0m
+2016/11/13 21:11:45 ui: [1;32m[0m
+2016/11/13 21:11:45 Waiting on builds to complete...
+2016/11/13 21:11:45 Starting build run: vmware-iso
+2016/11/13 21:11:45 Running builder: vmware-iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 reconnecting to TCP connection for SSH
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 handshaking with SSH
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Keyboard interactive challenge:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 -- User:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 -- Instructions:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 -- Question 1: Password:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Keyboard interactive challenge:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 -- User:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 -- Instructions:
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 handshake complete!
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [INFO] agent forwarding enabled
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: esxcli --formatter csv system version get
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Connected to VMware ESXi 5.5.0 Releasebuild-2718055
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: esxcli --formatter csv system settings advanced list -o /Net/GuestIPHack
+2016/11/13 21:11:45 ui: [1;32m==> vmware-iso: Downloading or copying ISO[0m
+2016/11/13 21:11:45 ui: [0;32m    vmware-iso: Downloading or copying: file:///Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso[0m
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Acquiring lock to download: file:///Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Parsed URL: &url.URL{Scheme:"file", Opaque:"", User:(*url.Userinfo)(nil), Host:"", Path:"/Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso", RawPath:"", ForceQuery:false, RawQuery:"", Fragment:""}
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 [DEBUG] Using local file: /Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: test -e /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Remote command exited with '1': test -e /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: mkdir -p /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 No floppy files specified. Floppy disk will not be made.
+2016/11/13 21:11:45 ui: [1;32m==> vmware-iso: Uploading ISO to remote machine...[0m
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Remote uploading: /Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: mkdir -p /vmfs/volumes/isostore/redhat
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Verifying checksum of /vmfs/volumes/isostore/redhat/rhel-server-6.7-x86_64-dvd.iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: stat /vmfs/volumes/isostore/redhat/rhel-server-6.7-x86_64-dvd.iso
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 Initial checksum matched, no upload needed.
+2016/11/13 21:11:45 ui: [1;32m==> vmware-iso: Creating virtual machine disk[0m
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 opening new ssh session
+2016/11/13 21:11:45 packer: 2016/11/13 21:11:45 starting remote command: vmkfstools -c 20480M -d zeroedthick -a lsilogic /vmfs/volumes/SSDstore02/output-vmware-iso/disk.vmdk
+2016/11/13 21:11:46 ui: [1;32m==> vmware-iso: Building and writing VMX file[0m
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Writing VMX to: /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-vmx108899353/packer-vmware-iso.vmx
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'scsi0:0.fileName' = 'disk.vmdk'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'ethernet0.networkName' = 'VM Network'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'scsi0:0.present' = 'TRUE'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'numvcpus' = '1'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'cpuid.coresPerSocket' = '1'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'memsize' = '512'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'ethernet0.virtualDev' = 'vmxnet3'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'ethernet0.present' = 'TRUE'
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Setting VMX: 'scsi0:0.redo' = ''
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Writing VMX to: /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-vmx108899353/packer-vmware-iso.vmx
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Suppressing messages in VMX
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Trying port: 8054
+2016/11/13 21:11:46 ui: [1;32m==> vmware-iso: Starting HTTP server on port 8054[0m
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Looking for available port between 5900 and 6000
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 opening new ssh session
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 starting remote command: esxcli --formatter csv network ip connection list
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::5989, port 5989 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address fe80:2::4639:c4ff:fe54:f97d:427, port 427 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address 192.168.1.2:427, port 427 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address 0.0.0.0:443, port 443 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::443, port 443 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address 0.0.0.0:80, port 80 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::80, port 80 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::22, port 22 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address 0.0.0.0:22, port 22 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address ::1:2233, port 2233 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::902, port 902 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address 0.0.0.0:902, port 902 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::8000, port 8000 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 ESXi listening on address :::8100, port 8100 unavailable for VNC
+2016/11/13 21:11:46 packer: 2016/11/13 21:11:46 Trying address: 192.168.1.2:5900...
+2016/11/13 21:11:47 packer: 2016/11/13 21:11:47 Timeout connecting to: 192.168.1.2:5900 (check firewall rules)
+2016/11/13 21:11:47 packer: 2016/11/13 21:11:47 Trying address: 192.168.1.2:5901...
+2016/11/13 21:11:48 packer: 2016/11/13 21:11:48 Timeout connecting to: 192.168.1.2:5901 (check firewall rules)
+2016/11/13 21:11:48 packer: 2016/11/13 21:11:48 Trying address: 192.168.1.2:5902...
+2016/11/13 21:11:49 packer: 2016/11/13 21:11:49 Timeout connecting to: 192.168.1.2:5902 (check firewall rules)
+2016/11/13 21:11:49 packer: 2016/11/13 21:11:49 Trying address: 192.168.1.2:5903...
+2016/11/13 21:11:50 packer: 2016/11/13 21:11:50 Timeout connecting to: 192.168.1.2:5903 (check firewall rules)
+2016/11/13 21:11:50 packer: 2016/11/13 21:11:50 Trying address: 192.168.1.2:5904...
+2016/11/13 21:11:51 packer: 2016/11/13 21:11:51 Timeout connecting to: 192.168.1.2:5904 (check firewall rules)
+2016/11/13 21:11:51 packer: 2016/11/13 21:11:51 Trying address: 192.168.1.2:5905...
+2016/11/13 21:11:52 packer: 2016/11/13 21:11:52 Timeout connecting to: 192.168.1.2:5905 (check firewall rules)
+2016/11/13 21:11:52 packer: 2016/11/13 21:11:52 Trying address: 192.168.1.2:5906...
+2016/11/13 21:11:53 packer: 2016/11/13 21:11:53 Timeout connecting to: 192.168.1.2:5906 (check firewall rules)
+2016/11/13 21:11:53 packer: 2016/11/13 21:11:53 Trying address: 192.168.1.2:5907...
+2016/11/13 21:11:54 packer: 2016/11/13 21:11:54 Timeout connecting to: 192.168.1.2:5907 (check firewall rules)
+2016/11/13 21:11:54 packer: 2016/11/13 21:11:54 Trying address: 192.168.1.2:5908...
+2016/11/13 21:11:55 packer: 2016/11/13 21:11:55 Timeout connecting to: 192.168.1.2:5908 (check firewall rules)
+2016/11/13 21:11:55 packer: 2016/11/13 21:11:55 Trying address: 192.168.1.2:5909...
+2016/11/13 21:11:56 packer: 2016/11/13 21:11:56 Timeout connecting to: 192.168.1.2:5909 (check firewall rules)
+2016/11/13 21:11:56 packer: 2016/11/13 21:11:56 Trying address: 192.168.1.2:5910...
+2016/11/13 21:11:57 packer: 2016/11/13 21:11:57 Timeout connecting to: 192.168.1.2:5910 (check firewall rules)
+2016/11/13 21:11:57 packer: 2016/11/13 21:11:57 Trying address: 192.168.1.2:5911...
+2016/11/13 21:11:58 packer: 2016/11/13 21:11:58 Timeout connecting to: 192.168.1.2:5911 (check firewall rules)
+2016/11/13 21:11:58 packer: 2016/11/13 21:11:58 Trying address: 192.168.1.2:5912...
+2016/11/13 21:11:59 packer: 2016/11/13 21:11:59 Timeout connecting to: 192.168.1.2:5912 (check firewall rules)
+2016/11/13 21:11:59 packer: 2016/11/13 21:11:59 Trying address: 192.168.1.2:5913...
+2016/11/13 21:12:00 packer: 2016/11/13 21:12:00 Timeout connecting to: 192.168.1.2:5913 (check firewall rules)
+2016/11/13 21:12:00 packer: 2016/11/13 21:12:00 Trying address: 192.168.1.2:5914...
+2016/11/13 21:12:01 packer: 2016/11/13 21:12:01 Timeout connecting to: 192.168.1.2:5914 (check firewall rules)
+2016/11/13 21:12:01 packer: 2016/11/13 21:12:01 Trying address: 192.168.1.2:5915...
+2016/11/13 21:12:02 packer: 2016/11/13 21:12:02 Timeout connecting to: 192.168.1.2:5915 (check firewall rules)
+2016/11/13 21:12:02 packer: 2016/11/13 21:12:02 Trying address: 192.168.1.2:5916...
+2016/11/13 21:12:03 packer: 2016/11/13 21:12:03 Timeout connecting to: 192.168.1.2:5916 (check firewall rules)
+2016/11/13 21:12:03 packer: 2016/11/13 21:12:03 Trying address: 192.168.1.2:5917...
+2016/11/13 21:12:04 packer: 2016/11/13 21:12:04 Timeout connecting to: 192.168.1.2:5917 (check firewall rules)
+2016/11/13 21:12:04 packer: 2016/11/13 21:12:04 Trying address: 192.168.1.2:5918...
+2016/11/13 21:12:05 packer: 2016/11/13 21:12:05 Timeout connecting to: 192.168.1.2:5918 (check firewall rules)
+2016/11/13 21:12:05 packer: 2016/11/13 21:12:05 Trying address: 192.168.1.2:5919...
+2016/11/13 21:12:06 packer: 2016/11/13 21:12:06 Timeout connecting to: 192.168.1.2:5919 (check firewall rules)
+2016/11/13 21:12:06 packer: 2016/11/13 21:12:06 Trying address: 192.168.1.2:5920...
+2016/11/13 21:12:07 packer: 2016/11/13 21:12:07 Timeout connecting to: 192.168.1.2:5920 (check firewall rules)
+2016/11/13 21:12:07 packer: 2016/11/13 21:12:07 Trying address: 192.168.1.2:5921...
+2016/11/13 21:12:08 packer: 2016/11/13 21:12:08 Timeout connecting to: 192.168.1.2:5921 (check firewall rules)
+2016/11/13 21:12:08 packer: 2016/11/13 21:12:08 Trying address: 192.168.1.2:5922...
+2016/11/13 21:12:09 packer: 2016/11/13 21:12:09 Timeout connecting to: 192.168.1.2:5922 (check firewall rules)
+2016/11/13 21:12:09 packer: 2016/11/13 21:12:09 Trying address: 192.168.1.2:5923...
+2016/11/13 21:12:10 packer: 2016/11/13 21:12:10 Timeout connecting to: 192.168.1.2:5923 (check firewall rules)
+2016/11/13 21:12:10 packer: 2016/11/13 21:12:10 Trying address: 192.168.1.2:5924...
+2016/11/13 21:12:11 packer: 2016/11/13 21:12:11 Timeout connecting to: 192.168.1.2:5924 (check firewall rules)
+2016/11/13 21:12:11 packer: 2016/11/13 21:12:11 Trying address: 192.168.1.2:5925...
+2016/11/13 21:12:12 packer: 2016/11/13 21:12:12 Timeout connecting to: 192.168.1.2:5925 (check firewall rules)
+2016/11/13 21:12:12 packer: 2016/11/13 21:12:12 Trying address: 192.168.1.2:5926...
+2016/11/13 21:12:13 packer: 2016/11/13 21:12:13 Timeout connecting to: 192.168.1.2:5926 (check firewall rules)
+2016/11/13 21:12:13 packer: 2016/11/13 21:12:13 Trying address: 192.168.1.2:5927...
+2016/11/13 21:12:14 packer: 2016/11/13 21:12:14 Timeout connecting to: 192.168.1.2:5927 (check firewall rules)
+2016/11/13 21:12:14 packer: 2016/11/13 21:12:14 Trying address: 192.168.1.2:5928...
+2016/11/13 21:12:15 packer: 2016/11/13 21:12:15 Timeout connecting to: 192.168.1.2:5928 (check firewall rules)
+2016/11/13 21:12:15 packer: 2016/11/13 21:12:15 Trying address: 192.168.1.2:5929...
+2016/11/13 21:12:16 packer: 2016/11/13 21:12:16 Timeout connecting to: 192.168.1.2:5929 (check firewall rules)
+2016/11/13 21:12:16 packer: 2016/11/13 21:12:16 Trying address: 192.168.1.2:5930...
+2016/11/13 21:12:17 packer: 2016/11/13 21:12:17 Timeout connecting to: 192.168.1.2:5930 (check firewall rules)
+2016/11/13 21:12:17 packer: 2016/11/13 21:12:17 Trying address: 192.168.1.2:5931...
+2016/11/13 21:12:18 packer: 2016/11/13 21:12:18 Timeout connecting to: 192.168.1.2:5931 (check firewall rules)
+2016/11/13 21:12:18 packer: 2016/11/13 21:12:18 Trying address: 192.168.1.2:5932...
+2016/11/13 21:12:19 packer: 2016/11/13 21:12:19 Timeout connecting to: 192.168.1.2:5932 (check firewall rules)
+2016/11/13 21:12:19 packer: 2016/11/13 21:12:19 Trying address: 192.168.1.2:5933...
+2016/11/13 21:12:20 packer: 2016/11/13 21:12:20 Timeout connecting to: 192.168.1.2:5933 (check firewall rules)
+2016/11/13 21:12:20 packer: 2016/11/13 21:12:20 Trying address: 192.168.1.2:5934...
+2016/11/13 21:12:21 packer: 2016/11/13 21:12:21 Timeout connecting to: 192.168.1.2:5934 (check firewall rules)
+2016/11/13 21:12:21 packer: 2016/11/13 21:12:21 Trying address: 192.168.1.2:5935...
+2016/11/13 21:12:22 packer: 2016/11/13 21:12:22 Timeout connecting to: 192.168.1.2:5935 (check firewall rules)
+2016/11/13 21:12:22 packer: 2016/11/13 21:12:22 Trying address: 192.168.1.2:5936...
+2016/11/13 21:12:23 packer: 2016/11/13 21:12:23 Timeout connecting to: 192.168.1.2:5936 (check firewall rules)
+2016/11/13 21:12:23 packer: 2016/11/13 21:12:23 Trying address: 192.168.1.2:5937...
+2016/11/13 21:12:24 packer: 2016/11/13 21:12:24 Timeout connecting to: 192.168.1.2:5937 (check firewall rules)
+2016/11/13 21:12:24 packer: 2016/11/13 21:12:24 Trying address: 192.168.1.2:5938...
+2016/11/13 21:12:25 packer: 2016/11/13 21:12:25 Timeout connecting to: 192.168.1.2:5938 (check firewall rules)
+2016/11/13 21:12:25 packer: 2016/11/13 21:12:25 Trying address: 192.168.1.2:5939...
+2016/11/13 21:12:26 packer: 2016/11/13 21:12:26 Timeout connecting to: 192.168.1.2:5939 (check firewall rules)
+2016/11/13 21:12:26 packer: 2016/11/13 21:12:26 Trying address: 192.168.1.2:5940...
+2016/11/13 21:12:27 packer: 2016/11/13 21:12:27 Timeout connecting to: 192.168.1.2:5940 (check firewall rules)
+2016/11/13 21:12:27 packer: 2016/11/13 21:12:27 Trying address: 192.168.1.2:5941...
+2016/11/13 21:12:28 packer: 2016/11/13 21:12:28 Timeout connecting to: 192.168.1.2:5941 (check firewall rules)
+2016/11/13 21:12:28 packer: 2016/11/13 21:12:28 Trying address: 192.168.1.2:5942...
+2016/11/13 21:12:29 packer: 2016/11/13 21:12:29 Timeout connecting to: 192.168.1.2:5942 (check firewall rules)
+2016/11/13 21:12:29 packer: 2016/11/13 21:12:29 Trying address: 192.168.1.2:5943...
+2016/11/13 21:12:30 packer: 2016/11/13 21:12:30 Timeout connecting to: 192.168.1.2:5943 (check firewall rules)
+2016/11/13 21:12:30 packer: 2016/11/13 21:12:30 Trying address: 192.168.1.2:5944...
+2016/11/13 21:12:31 packer: 2016/11/13 21:12:31 Timeout connecting to: 192.168.1.2:5944 (check firewall rules)
+2016/11/13 21:12:31 packer: 2016/11/13 21:12:31 Trying address: 192.168.1.2:5945...
+2016/11/13 21:12:32 packer: 2016/11/13 21:12:32 Timeout connecting to: 192.168.1.2:5945 (check firewall rules)
+2016/11/13 21:12:32 packer: 2016/11/13 21:12:32 Trying address: 192.168.1.2:5946...
+2016/11/13 21:12:33 packer: 2016/11/13 21:12:33 Timeout connecting to: 192.168.1.2:5946 (check firewall rules)
+2016/11/13 21:12:33 packer: 2016/11/13 21:12:33 Trying address: 192.168.1.2:5947...
+2016/11/13 21:12:34 packer: 2016/11/13 21:12:34 Timeout connecting to: 192.168.1.2:5947 (check firewall rules)
+2016/11/13 21:12:34 packer: 2016/11/13 21:12:34 Trying address: 192.168.1.2:5948...
+2016/11/13 21:12:35 packer: 2016/11/13 21:12:35 Timeout connecting to: 192.168.1.2:5948 (check firewall rules)
+2016/11/13 21:12:35 packer: 2016/11/13 21:12:35 Trying address: 192.168.1.2:5949...
+2016/11/13 21:12:36 packer: 2016/11/13 21:12:36 Timeout connecting to: 192.168.1.2:5949 (check firewall rules)
+2016/11/13 21:12:36 packer: 2016/11/13 21:12:36 Trying address: 192.168.1.2:5950...
+2016/11/13 21:12:37 packer: 2016/11/13 21:12:37 Timeout connecting to: 192.168.1.2:5950 (check firewall rules)
+2016/11/13 21:12:37 packer: 2016/11/13 21:12:37 Trying address: 192.168.1.2:5951...
+2016/11/13 21:12:38 packer: 2016/11/13 21:12:38 Timeout connecting to: 192.168.1.2:5951 (check firewall rules)
+2016/11/13 21:12:38 packer: 2016/11/13 21:12:38 Trying address: 192.168.1.2:5952...
+2016/11/13 21:12:39 packer: 2016/11/13 21:12:39 Timeout connecting to: 192.168.1.2:5952 (check firewall rules)
+2016/11/13 21:12:39 packer: 2016/11/13 21:12:39 Trying address: 192.168.1.2:5953...
+2016/11/13 21:12:40 packer: 2016/11/13 21:12:40 Timeout connecting to: 192.168.1.2:5953 (check firewall rules)
+2016/11/13 21:12:40 packer: 2016/11/13 21:12:40 Trying address: 192.168.1.2:5954...
+2016/11/13 21:12:41 packer: 2016/11/13 21:12:41 Timeout connecting to: 192.168.1.2:5954 (check firewall rules)
+2016/11/13 21:12:41 packer: 2016/11/13 21:12:41 Trying address: 192.168.1.2:5955...
+2016/11/13 21:12:42 packer: 2016/11/13 21:12:42 Timeout connecting to: 192.168.1.2:5955 (check firewall rules)
+2016/11/13 21:12:42 packer: 2016/11/13 21:12:42 Trying address: 192.168.1.2:5956...
+2016/11/13 21:12:43 packer: 2016/11/13 21:12:43 Timeout connecting to: 192.168.1.2:5956 (check firewall rules)
+2016/11/13 21:12:43 packer: 2016/11/13 21:12:43 Trying address: 192.168.1.2:5957...
+2016/11/13 21:12:44 packer: 2016/11/13 21:12:44 Timeout connecting to: 192.168.1.2:5957 (check firewall rules)
+2016/11/13 21:12:44 packer: 2016/11/13 21:12:44 Trying address: 192.168.1.2:5958...
+2016/11/13 21:12:45 packer: 2016/11/13 21:12:45 Timeout connecting to: 192.168.1.2:5958 (check firewall rules)
+2016/11/13 21:12:45 packer: 2016/11/13 21:12:45 Trying address: 192.168.1.2:5959...
+2016/11/13 21:12:46 packer: 2016/11/13 21:12:46 Timeout connecting to: 192.168.1.2:5959 (check firewall rules)
+2016/11/13 21:12:46 packer: 2016/11/13 21:12:46 Trying address: 192.168.1.2:5960...
+2016/11/13 21:12:47 packer: 2016/11/13 21:12:47 Timeout connecting to: 192.168.1.2:5960 (check firewall rules)
+2016/11/13 21:12:47 packer: 2016/11/13 21:12:47 Trying address: 192.168.1.2:5961...
+2016/11/13 21:12:48 packer: 2016/11/13 21:12:48 Timeout connecting to: 192.168.1.2:5961 (check firewall rules)
+2016/11/13 21:12:48 packer: 2016/11/13 21:12:48 Trying address: 192.168.1.2:5962...
+2016/11/13 21:12:49 packer: 2016/11/13 21:12:49 Timeout connecting to: 192.168.1.2:5962 (check firewall rules)
+2016/11/13 21:12:49 packer: 2016/11/13 21:12:49 Trying address: 192.168.1.2:5963...
+2016/11/13 21:12:50 packer: 2016/11/13 21:12:50 Timeout connecting to: 192.168.1.2:5963 (check firewall rules)
+2016/11/13 21:12:50 packer: 2016/11/13 21:12:50 Trying address: 192.168.1.2:5964...
+2016/11/13 21:12:51 packer: 2016/11/13 21:12:51 Timeout connecting to: 192.168.1.2:5964 (check firewall rules)
+2016/11/13 21:12:51 packer: 2016/11/13 21:12:51 Trying address: 192.168.1.2:5965...
+2016/11/13 21:12:52 packer: 2016/11/13 21:12:52 Timeout connecting to: 192.168.1.2:5965 (check firewall rules)
+2016/11/13 21:12:52 packer: 2016/11/13 21:12:52 Trying address: 192.168.1.2:5966...
+2016/11/13 21:12:53 packer: 2016/11/13 21:12:53 Timeout connecting to: 192.168.1.2:5966 (check firewall rules)
+2016/11/13 21:12:53 packer: 2016/11/13 21:12:53 Trying address: 192.168.1.2:5967...
+2016/11/13 21:12:54 packer: 2016/11/13 21:12:54 Timeout connecting to: 192.168.1.2:5967 (check firewall rules)
+2016/11/13 21:12:54 packer: 2016/11/13 21:12:54 Trying address: 192.168.1.2:5968...
+2016/11/13 21:12:55 packer: 2016/11/13 21:12:55 Timeout connecting to: 192.168.1.2:5968 (check firewall rules)
+2016/11/13 21:12:55 packer: 2016/11/13 21:12:55 Trying address: 192.168.1.2:5969...
+2016/11/13 21:12:56 packer: 2016/11/13 21:12:56 Timeout connecting to: 192.168.1.2:5969 (check firewall rules)
+2016/11/13 21:12:56 packer: 2016/11/13 21:12:56 Trying address: 192.168.1.2:5970...
+2016/11/13 21:12:57 packer: 2016/11/13 21:12:57 Timeout connecting to: 192.168.1.2:5970 (check firewall rules)
+2016/11/13 21:12:57 packer: 2016/11/13 21:12:57 Trying address: 192.168.1.2:5971...
+2016/11/13 21:12:58 packer: 2016/11/13 21:12:58 Timeout connecting to: 192.168.1.2:5971 (check firewall rules)
+2016/11/13 21:12:58 packer: 2016/11/13 21:12:58 Trying address: 192.168.1.2:5972...
+2016/11/13 21:12:59 packer: 2016/11/13 21:12:59 Timeout connecting to: 192.168.1.2:5972 (check firewall rules)
+2016/11/13 21:12:59 packer: 2016/11/13 21:12:59 Trying address: 192.168.1.2:5973...
+2016/11/13 21:13:00 packer: 2016/11/13 21:13:00 Timeout connecting to: 192.168.1.2:5973 (check firewall rules)
+2016/11/13 21:13:00 packer: 2016/11/13 21:13:00 Trying address: 192.168.1.2:5974...
+2016/11/13 21:13:01 packer: 2016/11/13 21:13:01 Timeout connecting to: 192.168.1.2:5974 (check firewall rules)
+2016/11/13 21:13:01 packer: 2016/11/13 21:13:01 Trying address: 192.168.1.2:5975...
+2016/11/13 21:13:02 packer: 2016/11/13 21:13:02 Timeout connecting to: 192.168.1.2:5975 (check firewall rules)
+2016/11/13 21:13:02 packer: 2016/11/13 21:13:02 Trying address: 192.168.1.2:5976...
+2016/11/13 21:13:03 packer: 2016/11/13 21:13:03 Timeout connecting to: 192.168.1.2:5976 (check firewall rules)
+2016/11/13 21:13:03 packer: 2016/11/13 21:13:03 Trying address: 192.168.1.2:5977...
+2016/11/13 21:13:04 packer: 2016/11/13 21:13:04 Timeout connecting to: 192.168.1.2:5977 (check firewall rules)
+2016/11/13 21:13:04 packer: 2016/11/13 21:13:04 Trying address: 192.168.1.2:5978...
+2016/11/13 21:13:05 packer: 2016/11/13 21:13:05 Timeout connecting to: 192.168.1.2:5978 (check firewall rules)
+2016/11/13 21:13:05 packer: 2016/11/13 21:13:05 Trying address: 192.168.1.2:5979...
+2016/11/13 21:13:06 packer: 2016/11/13 21:13:06 Timeout connecting to: 192.168.1.2:5979 (check firewall rules)
+2016/11/13 21:13:06 packer: 2016/11/13 21:13:06 Trying address: 192.168.1.2:5980...
+2016/11/13 21:13:07 packer: 2016/11/13 21:13:07 Timeout connecting to: 192.168.1.2:5980 (check firewall rules)
+2016/11/13 21:13:07 packer: 2016/11/13 21:13:07 Trying address: 192.168.1.2:5981...
+2016/11/13 21:13:08 packer: 2016/11/13 21:13:08 Timeout connecting to: 192.168.1.2:5981 (check firewall rules)
+2016/11/13 21:13:08 packer: 2016/11/13 21:13:08 Trying address: 192.168.1.2:5982...
+2016/11/13 21:13:09 packer: 2016/11/13 21:13:09 Timeout connecting to: 192.168.1.2:5982 (check firewall rules)
+2016/11/13 21:13:09 packer: 2016/11/13 21:13:09 Trying address: 192.168.1.2:5983...
+2016/11/13 21:13:10 packer: 2016/11/13 21:13:10 Timeout connecting to: 192.168.1.2:5983 (check firewall rules)
+2016/11/13 21:13:10 packer: 2016/11/13 21:13:10 Trying address: 192.168.1.2:5984...
+2016/11/13 21:13:11 packer: 2016/11/13 21:13:11 Timeout connecting to: 192.168.1.2:5984 (check firewall rules)
+2016/11/13 21:13:11 packer: 2016/11/13 21:13:11 Trying address: 192.168.1.2:5985...
+2016/11/13 21:13:12 packer: 2016/11/13 21:13:12 Timeout connecting to: 192.168.1.2:5985 (check firewall rules)
+2016/11/13 21:13:12 packer: 2016/11/13 21:13:12 Trying address: 192.168.1.2:5986...
+2016/11/13 21:13:13 packer: 2016/11/13 21:13:13 Timeout connecting to: 192.168.1.2:5986 (check firewall rules)
+2016/11/13 21:13:13 packer: 2016/11/13 21:13:13 Trying address: 192.168.1.2:5987...
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Timeout connecting to: 192.168.1.2:5987 (check firewall rules)
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Trying address: 192.168.1.2:5988...
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Found available VNC port: 5988
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Writing VMX to: /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-vmx108899353/packer-vmware-iso.vmx
+2016/11/13 21:13:14 ui: [1;32m==> vmware-iso: Registering remote VM...[0m
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 opening new ssh session
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Starting remote scp process:  scp -vt /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Started SCP session, beginning transfers...
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Copying input data into temporary file so we can read the length
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 [DEBUG] scp: Uploading packer-vmware-iso.vmx: perms=C0644 size=2412
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 SCP session complete, closing stdin pipe.
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 Waiting for SSH session to complete.
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 scp stderr (length 39): Sink: C0644 2412 packer-vmware-iso.vmx
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 opening new ssh session
+2016/11/13 21:13:14 packer: 2016/11/13 21:13:14 starting remote command: vim-cmd solo/registervm /vmfs/volumes/SSDstore02/output-vmware-iso/packer-vmware-iso.vmx
+2016/11/13 21:13:15 ui: [1;32m==> vmware-iso: Starting virtual machine...[0m
+2016/11/13 21:13:15 ui: [0;32m    vmware-iso: The VM will be run headless, without a GUI. If you want to
+    vmware-iso: view the screen of the VM, connect via VNC with the password "JinerM=^" to
+    vmware-iso: 192.168.1.2:5988[0m
+2016/11/13 21:13:15 packer: 2016/11/13 21:13:15 opening new ssh session
+2016/11/13 21:13:15 packer: 2016/11/13 21:13:15 starting remote command: vim-cmd vmsvc/power.on 108
+2016/11/13 21:13:16 packer: 2016/11/13 21:13:16 opening new ssh session
+2016/11/13 21:13:16 packer: 2016/11/13 21:13:16 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:13:17 ui: [1;32m==> vmware-iso: Waiting 10s for boot...[0m
+2016/11/13 21:13:27 ui: [1;32m==> vmware-iso: Connecting to VM via VNC[0m
+2016/11/13 21:13:27 packer: 2016/11/13 21:13:27 Connected to VNC desktop: packer-vmware-iso
+2016/11/13 21:13:27 packer: 2016/11/13 21:13:27 Host IP for the VMware machine: 192.168.1.108
+2016/11/13 21:13:27 ui: [1;32m==> vmware-iso: Typing the boot command over VNC...[0m
+2016/11/13 21:13:27 packer: 2016/11/13 21:13:27 Special code '<tab>' found, replacing with: 65289
+2016/11/13 21:13:27 packer: 2016/11/13 21:13:27 Sending char ' ', code 32, shift false
+2016/11/13 21:13:28 packer: 2016/11/13 21:13:28 Sending char 't', code 116, shift false
+2016/11/13 21:13:28 packer: 2016/11/13 21:13:28 Sending char 'e', code 101, shift false
+2016/11/13 21:13:28 packer: 2016/11/13 21:13:28 Sending char 'x', code 120, shift false
+2016/11/13 21:13:28 packer: 2016/11/13 21:13:28 Sending char 't', code 116, shift false
+2016/11/13 21:13:28 packer: 2016/11/13 21:13:28 Sending char ' ', code 32, shift false
+2016/11/13 21:13:29 packer: 2016/11/13 21:13:29 Sending char 'k', code 107, shift false
+2016/11/13 21:13:29 packer: 2016/11/13 21:13:29 Sending char 's', code 115, shift false
+2016/11/13 21:13:29 packer: 2016/11/13 21:13:29 Sending char '=', code 61, shift false
+2016/11/13 21:13:29 packer: 2016/11/13 21:13:29 Sending char 'h', code 104, shift false
+2016/11/13 21:13:29 packer: 2016/11/13 21:13:29 Sending char 't', code 116, shift false
+2016/11/13 21:13:30 packer: 2016/11/13 21:13:30 Sending char 't', code 116, shift false
+2016/11/13 21:13:30 packer: 2016/11/13 21:13:30 Sending char 'p', code 112, shift false
+2016/11/13 21:13:30 packer: 2016/11/13 21:13:30 Sending char ':', code 58, shift true
+2016/11/13 21:13:30 packer: 2016/11/13 21:13:30 Sending char '/', code 47, shift false
+2016/11/13 21:13:30 packer: 2016/11/13 21:13:30 Sending char '/', code 47, shift false
+2016/11/13 21:13:31 packer: 2016/11/13 21:13:31 Sending char '1', code 49, shift false
+2016/11/13 21:13:31 packer: 2016/11/13 21:13:31 Sending char '9', code 57, shift false
+2016/11/13 21:13:31 packer: 2016/11/13 21:13:31 Sending char '2', code 50, shift false
+2016/11/13 21:13:31 packer: 2016/11/13 21:13:31 Sending char '.', code 46, shift false
+2016/11/13 21:13:31 packer: 2016/11/13 21:13:31 Sending char '1', code 49, shift false
+2016/11/13 21:13:32 packer: 2016/11/13 21:13:32 Sending char '6', code 54, shift false
+2016/11/13 21:13:32 packer: 2016/11/13 21:13:32 Sending char '8', code 56, shift false
+2016/11/13 21:13:32 packer: 2016/11/13 21:13:32 Sending char '.', code 46, shift false
+2016/11/13 21:13:32 packer: 2016/11/13 21:13:32 Sending char '1', code 49, shift false
+2016/11/13 21:13:32 packer: 2016/11/13 21:13:32 Sending char '.', code 46, shift false
+2016/11/13 21:13:33 packer: 2016/11/13 21:13:33 Sending char '1', code 49, shift false
+2016/11/13 21:13:33 packer: 2016/11/13 21:13:33 Sending char '0', code 48, shift false
+2016/11/13 21:13:33 packer: 2016/11/13 21:13:33 Sending char '8', code 56, shift false
+2016/11/13 21:13:33 packer: 2016/11/13 21:13:33 Sending char ':', code 58, shift true
+2016/11/13 21:13:34 packer: 2016/11/13 21:13:34 Sending char '8', code 56, shift false
+2016/11/13 21:13:34 packer: 2016/11/13 21:13:34 Sending char '0', code 48, shift false
+2016/11/13 21:13:34 packer: 2016/11/13 21:13:34 Sending char '5', code 53, shift false
+2016/11/13 21:13:34 packer: 2016/11/13 21:13:34 Sending char '4', code 52, shift false
+2016/11/13 21:13:34 packer: 2016/11/13 21:13:34 Sending char '/', code 47, shift false
+2016/11/13 21:13:35 packer: 2016/11/13 21:13:35 Sending char 'k', code 107, shift false
+2016/11/13 21:13:35 packer: 2016/11/13 21:13:35 Sending char 's', code 115, shift false
+2016/11/13 21:13:35 packer: 2016/11/13 21:13:35 Sending char '.', code 46, shift false
+2016/11/13 21:13:35 packer: 2016/11/13 21:13:35 Sending char 'c', code 99, shift false
+2016/11/13 21:13:35 packer: 2016/11/13 21:13:35 Sending char 'f', code 102, shift false
+2016/11/13 21:13:36 packer: 2016/11/13 21:13:36 Sending char 'g', code 103, shift false
+2016/11/13 21:13:36 packer: 2016/11/13 21:13:36 Special code '<enter>' found, replacing with: 65293
+2016/11/13 21:13:36 packer: 2016/11/13 21:13:36 Special code '<wait>' found, sleeping one second
+2016/11/13 21:13:37 packer: 2016/11/13 21:13:37 [INFO] Waiting for SSH, up to timeout: 2h46m40s
+2016/11/13 21:13:37 ui: [1;32m==> vmware-iso: Waiting for SSH to become available...[0m
+2016/11/13 21:13:37 packer: 2016/11/13 21:13:37 opening new ssh session
+2016/11/13 21:13:37 packer: 2016/11/13 21:13:37 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:13:37 packer: 2016/11/13 21:13:37 opening new ssh session
+2016/11/13 21:13:37 packer: 2016/11/13 21:13:37 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:13:38 packer: 2016/11/13 21:13:38 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:13:43 packer: 2016/11/13 21:13:43 opening new ssh session
+2016/11/13 21:13:43 packer: 2016/11/13 21:13:43 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:13:43 packer: 2016/11/13 21:13:43 opening new ssh session
+2016/11/13 21:13:43 packer: 2016/11/13 21:13:43 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:13:43 packer: 2016/11/13 21:13:43 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:13:48 packer: 2016/11/13 21:13:48 opening new ssh session
+2016/11/13 21:13:48 packer: 2016/11/13 21:13:48 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:13:48 packer: 2016/11/13 21:13:48 opening new ssh session
+2016/11/13 21:13:48 packer: 2016/11/13 21:13:48 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:13:49 packer: 2016/11/13 21:13:49 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:13:54 packer: 2016/11/13 21:13:54 opening new ssh session
+2016/11/13 21:13:54 packer: 2016/11/13 21:13:54 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:13:54 packer: 2016/11/13 21:13:54 opening new ssh session
+2016/11/13 21:13:54 packer: 2016/11/13 21:13:54 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:13:54 packer: 2016/11/13 21:13:54 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:13:59 packer: 2016/11/13 21:13:59 opening new ssh session
+2016/11/13 21:13:59 packer: 2016/11/13 21:13:59 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:13:59 packer: 2016/11/13 21:13:59 opening new ssh session
+2016/11/13 21:13:59 packer: 2016/11/13 21:13:59 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:00 packer: 2016/11/13 21:14:00 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:05 packer: 2016/11/13 21:14:05 opening new ssh session
+2016/11/13 21:14:05 packer: 2016/11/13 21:14:05 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:05 packer: 2016/11/13 21:14:05 opening new ssh session
+2016/11/13 21:14:05 packer: 2016/11/13 21:14:05 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:05 packer: 2016/11/13 21:14:05 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:10 packer: 2016/11/13 21:14:10 opening new ssh session
+2016/11/13 21:14:10 packer: 2016/11/13 21:14:10 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:11 packer: 2016/11/13 21:14:11 opening new ssh session
+2016/11/13 21:14:11 packer: 2016/11/13 21:14:11 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:11 packer: 2016/11/13 21:14:11 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:16 packer: 2016/11/13 21:14:16 opening new ssh session
+2016/11/13 21:14:16 packer: 2016/11/13 21:14:16 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:17 packer: 2016/11/13 21:14:17 opening new ssh session
+2016/11/13 21:14:17 packer: 2016/11/13 21:14:17 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:17 packer: 2016/11/13 21:14:17 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:22 packer: 2016/11/13 21:14:22 opening new ssh session
+2016/11/13 21:14:22 packer: 2016/11/13 21:14:22 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:22 packer: 2016/11/13 21:14:22 opening new ssh session
+2016/11/13 21:14:22 packer: 2016/11/13 21:14:22 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:23 packer: 2016/11/13 21:14:23 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:28 packer: 2016/11/13 21:14:28 opening new ssh session
+2016/11/13 21:14:28 packer: 2016/11/13 21:14:28 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:28 packer: 2016/11/13 21:14:28 opening new ssh session
+2016/11/13 21:14:28 packer: 2016/11/13 21:14:28 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:28 packer: 2016/11/13 21:14:28 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:34 packer: 2016/11/13 21:14:34 opening new ssh session
+2016/11/13 21:14:34 packer: 2016/11/13 21:14:34 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:34 packer: 2016/11/13 21:14:34 opening new ssh session
+2016/11/13 21:14:34 packer: 2016/11/13 21:14:34 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:34 packer: 2016/11/13 21:14:34 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:39 packer: 2016/11/13 21:14:39 opening new ssh session
+2016/11/13 21:14:39 packer: 2016/11/13 21:14:39 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:39 packer: 2016/11/13 21:14:39 opening new ssh session
+2016/11/13 21:14:39 packer: 2016/11/13 21:14:39 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:40 packer: 2016/11/13 21:14:40 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:45 packer: 2016/11/13 21:14:45 opening new ssh session
+2016/11/13 21:14:45 packer: 2016/11/13 21:14:45 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:45 packer: 2016/11/13 21:14:45 opening new ssh session
+2016/11/13 21:14:45 packer: 2016/11/13 21:14:45 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:45 packer: 2016/11/13 21:14:45 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:50 packer: 2016/11/13 21:14:50 opening new ssh session
+2016/11/13 21:14:50 packer: 2016/11/13 21:14:50 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:50 packer: 2016/11/13 21:14:50 opening new ssh session
+2016/11/13 21:14:50 packer: 2016/11/13 21:14:50 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:51 packer: 2016/11/13 21:14:51 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:14:56 packer: 2016/11/13 21:14:56 opening new ssh session
+2016/11/13 21:14:56 packer: 2016/11/13 21:14:56 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:14:56 packer: 2016/11/13 21:14:56 opening new ssh session
+2016/11/13 21:14:56 packer: 2016/11/13 21:14:56 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:14:56 packer: 2016/11/13 21:14:56 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:01 packer: 2016/11/13 21:15:01 opening new ssh session
+2016/11/13 21:15:01 packer: 2016/11/13 21:15:01 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:01 packer: 2016/11/13 21:15:01 opening new ssh session
+2016/11/13 21:15:01 packer: 2016/11/13 21:15:01 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:02 packer: 2016/11/13 21:15:02 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:07 packer: 2016/11/13 21:15:07 opening new ssh session
+2016/11/13 21:15:07 packer: 2016/11/13 21:15:07 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:07 packer: 2016/11/13 21:15:07 opening new ssh session
+2016/11/13 21:15:07 packer: 2016/11/13 21:15:07 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:07 packer: 2016/11/13 21:15:07 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:12 packer: 2016/11/13 21:15:12 opening new ssh session
+2016/11/13 21:15:12 packer: 2016/11/13 21:15:12 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:13 packer: 2016/11/13 21:15:13 opening new ssh session
+2016/11/13 21:15:13 packer: 2016/11/13 21:15:13 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:13 packer: 2016/11/13 21:15:13 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:18 packer: 2016/11/13 21:15:18 opening new ssh session
+2016/11/13 21:15:18 packer: 2016/11/13 21:15:18 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:18 packer: 2016/11/13 21:15:18 opening new ssh session
+2016/11/13 21:15:18 packer: 2016/11/13 21:15:18 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:18 packer: 2016/11/13 21:15:18 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:23 packer: 2016/11/13 21:15:23 opening new ssh session
+2016/11/13 21:15:23 packer: 2016/11/13 21:15:23 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:24 packer: 2016/11/13 21:15:24 opening new ssh session
+2016/11/13 21:15:24 packer: 2016/11/13 21:15:24 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:24 packer: 2016/11/13 21:15:24 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:29 packer: 2016/11/13 21:15:29 opening new ssh session
+2016/11/13 21:15:29 packer: 2016/11/13 21:15:29 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:29 packer: 2016/11/13 21:15:29 opening new ssh session
+2016/11/13 21:15:29 packer: 2016/11/13 21:15:29 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:29 packer: 2016/11/13 21:15:29 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:34 packer: 2016/11/13 21:15:34 opening new ssh session
+2016/11/13 21:15:34 packer: 2016/11/13 21:15:34 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:35 packer: 2016/11/13 21:15:35 opening new ssh session
+2016/11/13 21:15:35 packer: 2016/11/13 21:15:35 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:35 packer: 2016/11/13 21:15:35 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:40 packer: 2016/11/13 21:15:40 opening new ssh session
+2016/11/13 21:15:40 packer: 2016/11/13 21:15:40 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:40 packer: 2016/11/13 21:15:40 opening new ssh session
+2016/11/13 21:15:40 packer: 2016/11/13 21:15:40 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:41 packer: 2016/11/13 21:15:41 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:46 packer: 2016/11/13 21:15:46 opening new ssh session
+2016/11/13 21:15:46 packer: 2016/11/13 21:15:46 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:46 packer: 2016/11/13 21:15:46 opening new ssh session
+2016/11/13 21:15:46 packer: 2016/11/13 21:15:46 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:46 packer: 2016/11/13 21:15:46 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:51 packer: 2016/11/13 21:15:51 opening new ssh session
+2016/11/13 21:15:51 packer: 2016/11/13 21:15:51 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:51 packer: 2016/11/13 21:15:51 opening new ssh session
+2016/11/13 21:15:51 packer: 2016/11/13 21:15:51 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:52 packer: 2016/11/13 21:15:52 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:15:57 packer: 2016/11/13 21:15:57 opening new ssh session
+2016/11/13 21:15:57 packer: 2016/11/13 21:15:57 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:15:57 packer: 2016/11/13 21:15:57 opening new ssh session
+2016/11/13 21:15:57 packer: 2016/11/13 21:15:57 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:15:57 packer: 2016/11/13 21:15:57 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:02 packer: 2016/11/13 21:16:02 opening new ssh session
+2016/11/13 21:16:02 packer: 2016/11/13 21:16:02 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:03 packer: 2016/11/13 21:16:03 opening new ssh session
+2016/11/13 21:16:03 packer: 2016/11/13 21:16:03 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:03 packer: 2016/11/13 21:16:03 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:08 packer: 2016/11/13 21:16:08 opening new ssh session
+2016/11/13 21:16:08 packer: 2016/11/13 21:16:08 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:08 packer: 2016/11/13 21:16:08 opening new ssh session
+2016/11/13 21:16:08 packer: 2016/11/13 21:16:08 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:08 packer: 2016/11/13 21:16:08 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:13 packer: 2016/11/13 21:16:13 opening new ssh session
+2016/11/13 21:16:13 packer: 2016/11/13 21:16:13 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:14 packer: 2016/11/13 21:16:14 opening new ssh session
+2016/11/13 21:16:14 packer: 2016/11/13 21:16:14 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:14 packer: 2016/11/13 21:16:14 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:19 packer: 2016/11/13 21:16:19 opening new ssh session
+2016/11/13 21:16:19 packer: 2016/11/13 21:16:19 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:19 packer: 2016/11/13 21:16:19 opening new ssh session
+2016/11/13 21:16:19 packer: 2016/11/13 21:16:19 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:20 packer: 2016/11/13 21:16:20 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:25 packer: 2016/11/13 21:16:25 opening new ssh session
+2016/11/13 21:16:25 packer: 2016/11/13 21:16:25 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:25 packer: 2016/11/13 21:16:25 opening new ssh session
+2016/11/13 21:16:25 packer: 2016/11/13 21:16:25 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:25 packer: 2016/11/13 21:16:25 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:30 packer: 2016/11/13 21:16:30 opening new ssh session
+2016/11/13 21:16:30 packer: 2016/11/13 21:16:30 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:31 packer: 2016/11/13 21:16:31 opening new ssh session
+2016/11/13 21:16:31 packer: 2016/11/13 21:16:31 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:31 packer: 2016/11/13 21:16:31 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:36 packer: 2016/11/13 21:16:36 opening new ssh session
+2016/11/13 21:16:36 packer: 2016/11/13 21:16:36 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:36 packer: 2016/11/13 21:16:36 opening new ssh session
+2016/11/13 21:16:36 packer: 2016/11/13 21:16:36 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:37 packer: 2016/11/13 21:16:37 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:42 packer: 2016/11/13 21:16:42 opening new ssh session
+2016/11/13 21:16:42 packer: 2016/11/13 21:16:42 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:42 packer: 2016/11/13 21:16:42 opening new ssh session
+2016/11/13 21:16:42 packer: 2016/11/13 21:16:42 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:42 packer: 2016/11/13 21:16:42 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:47 packer: 2016/11/13 21:16:47 opening new ssh session
+2016/11/13 21:16:47 packer: 2016/11/13 21:16:47 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:48 packer: 2016/11/13 21:16:48 opening new ssh session
+2016/11/13 21:16:48 packer: 2016/11/13 21:16:48 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:48 packer: 2016/11/13 21:16:48 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:53 packer: 2016/11/13 21:16:53 opening new ssh session
+2016/11/13 21:16:53 packer: 2016/11/13 21:16:53 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:53 packer: 2016/11/13 21:16:53 opening new ssh session
+2016/11/13 21:16:53 packer: 2016/11/13 21:16:53 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:53 packer: 2016/11/13 21:16:53 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:16:58 packer: 2016/11/13 21:16:58 opening new ssh session
+2016/11/13 21:16:58 packer: 2016/11/13 21:16:58 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:16:59 packer: 2016/11/13 21:16:59 opening new ssh session
+2016/11/13 21:16:59 packer: 2016/11/13 21:16:59 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:16:59 packer: 2016/11/13 21:16:59 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:04 packer: 2016/11/13 21:17:04 opening new ssh session
+2016/11/13 21:17:04 packer: 2016/11/13 21:17:04 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:04 packer: 2016/11/13 21:17:04 opening new ssh session
+2016/11/13 21:17:04 packer: 2016/11/13 21:17:04 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:04 packer: 2016/11/13 21:17:04 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:09 packer: 2016/11/13 21:17:09 opening new ssh session
+2016/11/13 21:17:09 packer: 2016/11/13 21:17:09 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:10 packer: 2016/11/13 21:17:10 opening new ssh session
+2016/11/13 21:17:10 packer: 2016/11/13 21:17:10 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:10 packer: 2016/11/13 21:17:10 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:15 packer: 2016/11/13 21:17:15 opening new ssh session
+2016/11/13 21:17:15 packer: 2016/11/13 21:17:15 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:15 packer: 2016/11/13 21:17:15 opening new ssh session
+2016/11/13 21:17:15 packer: 2016/11/13 21:17:15 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:15 packer: 2016/11/13 21:17:15 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:20 packer: 2016/11/13 21:17:20 opening new ssh session
+2016/11/13 21:17:20 packer: 2016/11/13 21:17:20 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:21 packer: 2016/11/13 21:17:21 opening new ssh session
+2016/11/13 21:17:21 packer: 2016/11/13 21:17:21 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:21 packer: 2016/11/13 21:17:21 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:26 packer: 2016/11/13 21:17:26 opening new ssh session
+2016/11/13 21:17:26 packer: 2016/11/13 21:17:26 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:26 packer: 2016/11/13 21:17:26 opening new ssh session
+2016/11/13 21:17:26 packer: 2016/11/13 21:17:26 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:27 packer: 2016/11/13 21:17:27 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:32 packer: 2016/11/13 21:17:32 opening new ssh session
+2016/11/13 21:17:32 packer: 2016/11/13 21:17:32 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:32 packer: 2016/11/13 21:17:32 opening new ssh session
+2016/11/13 21:17:32 packer: 2016/11/13 21:17:32 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:32 packer: 2016/11/13 21:17:32 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:37 packer: 2016/11/13 21:17:37 opening new ssh session
+2016/11/13 21:17:37 packer: 2016/11/13 21:17:37 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:37 packer: 2016/11/13 21:17:37 opening new ssh session
+2016/11/13 21:17:37 packer: 2016/11/13 21:17:37 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:38 packer: 2016/11/13 21:17:38 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:43 packer: 2016/11/13 21:17:43 opening new ssh session
+2016/11/13 21:17:43 packer: 2016/11/13 21:17:43 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:43 packer: 2016/11/13 21:17:43 opening new ssh session
+2016/11/13 21:17:43 packer: 2016/11/13 21:17:43 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:43 packer: 2016/11/13 21:17:43 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:48 packer: 2016/11/13 21:17:48 opening new ssh session
+2016/11/13 21:17:48 packer: 2016/11/13 21:17:48 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:48 packer: 2016/11/13 21:17:48 opening new ssh session
+2016/11/13 21:17:48 packer: 2016/11/13 21:17:48 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:49 packer: 2016/11/13 21:17:49 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:54 packer: 2016/11/13 21:17:54 opening new ssh session
+2016/11/13 21:17:54 packer: 2016/11/13 21:17:54 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:17:54 packer: 2016/11/13 21:17:54 opening new ssh session
+2016/11/13 21:17:54 packer: 2016/11/13 21:17:54 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:17:54 packer: 2016/11/13 21:17:54 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:17:59 packer: 2016/11/13 21:17:59 opening new ssh session
+2016/11/13 21:17:59 packer: 2016/11/13 21:17:59 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:00 packer: 2016/11/13 21:18:00 opening new ssh session
+2016/11/13 21:18:00 packer: 2016/11/13 21:18:00 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:00 packer: 2016/11/13 21:18:00 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:05 packer: 2016/11/13 21:18:05 opening new ssh session
+2016/11/13 21:18:05 packer: 2016/11/13 21:18:05 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:05 packer: 2016/11/13 21:18:05 opening new ssh session
+2016/11/13 21:18:05 packer: 2016/11/13 21:18:05 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:05 packer: 2016/11/13 21:18:05 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:10 packer: 2016/11/13 21:18:10 opening new ssh session
+2016/11/13 21:18:10 packer: 2016/11/13 21:18:10 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:11 packer: 2016/11/13 21:18:11 opening new ssh session
+2016/11/13 21:18:11 packer: 2016/11/13 21:18:11 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:11 packer: 2016/11/13 21:18:11 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:16 packer: 2016/11/13 21:18:16 opening new ssh session
+2016/11/13 21:18:16 packer: 2016/11/13 21:18:16 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:16 packer: 2016/11/13 21:18:16 opening new ssh session
+2016/11/13 21:18:16 packer: 2016/11/13 21:18:16 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:17 packer: 2016/11/13 21:18:17 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:22 packer: 2016/11/13 21:18:22 opening new ssh session
+2016/11/13 21:18:22 packer: 2016/11/13 21:18:22 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:22 packer: 2016/11/13 21:18:22 opening new ssh session
+2016/11/13 21:18:22 packer: 2016/11/13 21:18:22 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:22 packer: 2016/11/13 21:18:22 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:27 packer: 2016/11/13 21:18:27 opening new ssh session
+2016/11/13 21:18:27 packer: 2016/11/13 21:18:27 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:28 packer: 2016/11/13 21:18:28 opening new ssh session
+2016/11/13 21:18:28 packer: 2016/11/13 21:18:28 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:28 packer: 2016/11/13 21:18:28 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:33 packer: 2016/11/13 21:18:33 opening new ssh session
+2016/11/13 21:18:33 packer: 2016/11/13 21:18:33 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:33 packer: 2016/11/13 21:18:33 opening new ssh session
+2016/11/13 21:18:33 packer: 2016/11/13 21:18:33 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:33 packer: 2016/11/13 21:18:33 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:38 packer: 2016/11/13 21:18:38 opening new ssh session
+2016/11/13 21:18:38 packer: 2016/11/13 21:18:38 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:39 packer: 2016/11/13 21:18:39 opening new ssh session
+2016/11/13 21:18:39 packer: 2016/11/13 21:18:39 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:39 packer: 2016/11/13 21:18:39 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:44 packer: 2016/11/13 21:18:44 opening new ssh session
+2016/11/13 21:18:44 packer: 2016/11/13 21:18:44 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:44 packer: 2016/11/13 21:18:44 opening new ssh session
+2016/11/13 21:18:44 packer: 2016/11/13 21:18:44 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:44 packer: 2016/11/13 21:18:44 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:49 packer: 2016/11/13 21:18:49 opening new ssh session
+2016/11/13 21:18:49 packer: 2016/11/13 21:18:49 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:50 packer: 2016/11/13 21:18:50 opening new ssh session
+2016/11/13 21:18:50 packer: 2016/11/13 21:18:50 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:50 packer: 2016/11/13 21:18:50 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:18:55 packer: 2016/11/13 21:18:55 opening new ssh session
+2016/11/13 21:18:55 packer: 2016/11/13 21:18:55 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:18:55 packer: 2016/11/13 21:18:55 opening new ssh session
+2016/11/13 21:18:55 packer: 2016/11/13 21:18:55 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:18:55 packer: 2016/11/13 21:18:55 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:00 packer: 2016/11/13 21:19:00 opening new ssh session
+2016/11/13 21:19:00 packer: 2016/11/13 21:19:00 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:01 packer: 2016/11/13 21:19:01 opening new ssh session
+2016/11/13 21:19:01 packer: 2016/11/13 21:19:01 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:01 packer: 2016/11/13 21:19:01 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:06 packer: 2016/11/13 21:19:06 opening new ssh session
+2016/11/13 21:19:06 packer: 2016/11/13 21:19:06 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:06 packer: 2016/11/13 21:19:06 opening new ssh session
+2016/11/13 21:19:06 packer: 2016/11/13 21:19:06 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:07 packer: 2016/11/13 21:19:07 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:12 packer: 2016/11/13 21:19:12 opening new ssh session
+2016/11/13 21:19:12 packer: 2016/11/13 21:19:12 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:12 packer: 2016/11/13 21:19:12 opening new ssh session
+2016/11/13 21:19:12 packer: 2016/11/13 21:19:12 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:12 packer: 2016/11/13 21:19:12 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:17 packer: 2016/11/13 21:19:17 opening new ssh session
+2016/11/13 21:19:17 packer: 2016/11/13 21:19:17 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:17 packer: 2016/11/13 21:19:17 opening new ssh session
+2016/11/13 21:19:17 packer: 2016/11/13 21:19:17 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:17 packer: 2016/11/13 21:19:17 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:22 packer: 2016/11/13 21:19:22 opening new ssh session
+2016/11/13 21:19:23 packer: 2016/11/13 21:19:23 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:23 packer: 2016/11/13 21:19:23 opening new ssh session
+2016/11/13 21:19:23 packer: 2016/11/13 21:19:23 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:23 packer: 2016/11/13 21:19:23 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:28 packer: 2016/11/13 21:19:28 opening new ssh session
+2016/11/13 21:19:28 packer: 2016/11/13 21:19:28 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:28 packer: 2016/11/13 21:19:28 opening new ssh session
+2016/11/13 21:19:28 packer: 2016/11/13 21:19:28 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:28 packer: 2016/11/13 21:19:28 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:33 packer: 2016/11/13 21:19:33 opening new ssh session
+2016/11/13 21:19:33 packer: 2016/11/13 21:19:33 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:34 packer: 2016/11/13 21:19:34 opening new ssh session
+2016/11/13 21:19:34 packer: 2016/11/13 21:19:34 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:34 packer: 2016/11/13 21:19:34 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:39 packer: 2016/11/13 21:19:39 opening new ssh session
+2016/11/13 21:19:39 packer: 2016/11/13 21:19:39 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:39 packer: 2016/11/13 21:19:39 opening new ssh session
+2016/11/13 21:19:39 packer: 2016/11/13 21:19:39 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:40 packer: 2016/11/13 21:19:40 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:45 packer: 2016/11/13 21:19:45 opening new ssh session
+2016/11/13 21:19:45 packer: 2016/11/13 21:19:45 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:45 packer: 2016/11/13 21:19:45 opening new ssh session
+2016/11/13 21:19:45 packer: 2016/11/13 21:19:45 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:45 packer: 2016/11/13 21:19:45 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:50 packer: 2016/11/13 21:19:50 opening new ssh session
+2016/11/13 21:19:50 packer: 2016/11/13 21:19:50 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:50 packer: 2016/11/13 21:19:50 opening new ssh session
+2016/11/13 21:19:50 packer: 2016/11/13 21:19:50 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:51 packer: 2016/11/13 21:19:51 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:19:56 packer: 2016/11/13 21:19:56 opening new ssh session
+2016/11/13 21:19:56 packer: 2016/11/13 21:19:56 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:19:56 packer: 2016/11/13 21:19:56 opening new ssh session
+2016/11/13 21:19:56 packer: 2016/11/13 21:19:56 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:19:56 packer: 2016/11/13 21:19:56 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:01 packer: 2016/11/13 21:20:01 opening new ssh session
+2016/11/13 21:20:01 packer: 2016/11/13 21:20:01 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:01 packer: 2016/11/13 21:20:01 opening new ssh session
+2016/11/13 21:20:01 packer: 2016/11/13 21:20:01 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:02 packer: 2016/11/13 21:20:02 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:07 packer: 2016/11/13 21:20:07 opening new ssh session
+2016/11/13 21:20:07 packer: 2016/11/13 21:20:07 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:07 packer: 2016/11/13 21:20:07 opening new ssh session
+2016/11/13 21:20:07 packer: 2016/11/13 21:20:07 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:07 packer: 2016/11/13 21:20:07 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:12 packer: 2016/11/13 21:20:12 opening new ssh session
+2016/11/13 21:20:12 packer: 2016/11/13 21:20:12 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:12 packer: 2016/11/13 21:20:12 opening new ssh session
+2016/11/13 21:20:12 packer: 2016/11/13 21:20:12 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:13 packer: 2016/11/13 21:20:13 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:18 packer: 2016/11/13 21:20:18 opening new ssh session
+2016/11/13 21:20:18 packer: 2016/11/13 21:20:18 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:18 packer: 2016/11/13 21:20:18 opening new ssh session
+2016/11/13 21:20:18 packer: 2016/11/13 21:20:18 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:18 packer: 2016/11/13 21:20:18 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:23 packer: 2016/11/13 21:20:23 opening new ssh session
+2016/11/13 21:20:23 packer: 2016/11/13 21:20:23 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:23 packer: 2016/11/13 21:20:23 opening new ssh session
+2016/11/13 21:20:23 packer: 2016/11/13 21:20:23 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:24 packer: 2016/11/13 21:20:24 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:29 packer: 2016/11/13 21:20:29 opening new ssh session
+2016/11/13 21:20:29 packer: 2016/11/13 21:20:29 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:29 packer: 2016/11/13 21:20:29 opening new ssh session
+2016/11/13 21:20:29 packer: 2016/11/13 21:20:29 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:29 packer: 2016/11/13 21:20:29 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:34 packer: 2016/11/13 21:20:34 opening new ssh session
+2016/11/13 21:20:34 packer: 2016/11/13 21:20:34 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:34 packer: 2016/11/13 21:20:34 opening new ssh session
+2016/11/13 21:20:34 packer: 2016/11/13 21:20:34 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:35 packer: 2016/11/13 21:20:35 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:40 packer: 2016/11/13 21:20:40 opening new ssh session
+2016/11/13 21:20:40 packer: 2016/11/13 21:20:40 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:40 packer: 2016/11/13 21:20:40 opening new ssh session
+2016/11/13 21:20:40 packer: 2016/11/13 21:20:40 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:40 packer: 2016/11/13 21:20:40 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:45 packer: 2016/11/13 21:20:45 opening new ssh session
+2016/11/13 21:20:45 packer: 2016/11/13 21:20:45 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:45 packer: 2016/11/13 21:20:45 opening new ssh session
+2016/11/13 21:20:45 packer: 2016/11/13 21:20:45 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:45 packer: 2016/11/13 21:20:45 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:50 packer: 2016/11/13 21:20:50 opening new ssh session
+2016/11/13 21:20:50 packer: 2016/11/13 21:20:50 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:51 packer: 2016/11/13 21:20:51 opening new ssh session
+2016/11/13 21:20:51 packer: 2016/11/13 21:20:51 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:51 packer: 2016/11/13 21:20:51 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:20:56 packer: 2016/11/13 21:20:56 opening new ssh session
+2016/11/13 21:20:56 packer: 2016/11/13 21:20:56 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:20:56 packer: 2016/11/13 21:20:56 opening new ssh session
+2016/11/13 21:20:56 packer: 2016/11/13 21:20:56 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:20:57 packer: 2016/11/13 21:20:57 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:02 packer: 2016/11/13 21:21:02 opening new ssh session
+2016/11/13 21:21:02 packer: 2016/11/13 21:21:02 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:02 packer: 2016/11/13 21:21:02 opening new ssh session
+2016/11/13 21:21:02 packer: 2016/11/13 21:21:02 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:02 packer: 2016/11/13 21:21:02 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:07 packer: 2016/11/13 21:21:07 opening new ssh session
+2016/11/13 21:21:07 packer: 2016/11/13 21:21:07 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:07 packer: 2016/11/13 21:21:07 opening new ssh session
+2016/11/13 21:21:07 packer: 2016/11/13 21:21:07 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:08 packer: 2016/11/13 21:21:08 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:13 packer: 2016/11/13 21:21:13 opening new ssh session
+2016/11/13 21:21:13 packer: 2016/11/13 21:21:13 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:13 packer: 2016/11/13 21:21:13 opening new ssh session
+2016/11/13 21:21:13 packer: 2016/11/13 21:21:13 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:13 packer: 2016/11/13 21:21:13 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:18 packer: 2016/11/13 21:21:18 opening new ssh session
+2016/11/13 21:21:18 packer: 2016/11/13 21:21:18 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:18 packer: 2016/11/13 21:21:18 opening new ssh session
+2016/11/13 21:21:18 packer: 2016/11/13 21:21:18 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:19 packer: 2016/11/13 21:21:19 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:24 packer: 2016/11/13 21:21:24 opening new ssh session
+2016/11/13 21:21:24 packer: 2016/11/13 21:21:24 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:24 packer: 2016/11/13 21:21:24 opening new ssh session
+2016/11/13 21:21:24 packer: 2016/11/13 21:21:24 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:24 packer: 2016/11/13 21:21:24 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:29 packer: 2016/11/13 21:21:29 opening new ssh session
+2016/11/13 21:21:29 packer: 2016/11/13 21:21:29 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:29 packer: 2016/11/13 21:21:29 opening new ssh session
+2016/11/13 21:21:29 packer: 2016/11/13 21:21:29 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:30 packer: 2016/11/13 21:21:30 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:35 packer: 2016/11/13 21:21:35 opening new ssh session
+2016/11/13 21:21:35 packer: 2016/11/13 21:21:35 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:35 packer: 2016/11/13 21:21:35 opening new ssh session
+2016/11/13 21:21:35 packer: 2016/11/13 21:21:35 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:35 packer: 2016/11/13 21:21:35 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:40 packer: 2016/11/13 21:21:40 opening new ssh session
+2016/11/13 21:21:40 packer: 2016/11/13 21:21:40 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:40 packer: 2016/11/13 21:21:40 opening new ssh session
+2016/11/13 21:21:40 packer: 2016/11/13 21:21:40 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:41 packer: 2016/11/13 21:21:41 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:46 packer: 2016/11/13 21:21:46 opening new ssh session
+2016/11/13 21:21:46 packer: 2016/11/13 21:21:46 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:46 packer: 2016/11/13 21:21:46 opening new ssh session
+2016/11/13 21:21:46 packer: 2016/11/13 21:21:46 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:46 packer: 2016/11/13 21:21:46 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:51 packer: 2016/11/13 21:21:51 opening new ssh session
+2016/11/13 21:21:51 packer: 2016/11/13 21:21:51 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:51 packer: 2016/11/13 21:21:51 opening new ssh session
+2016/11/13 21:21:51 packer: 2016/11/13 21:21:51 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:52 packer: 2016/11/13 21:21:52 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:21:57 packer: 2016/11/13 21:21:57 opening new ssh session
+2016/11/13 21:21:57 packer: 2016/11/13 21:21:57 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:21:57 packer: 2016/11/13 21:21:57 opening new ssh session
+2016/11/13 21:21:57 packer: 2016/11/13 21:21:57 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:21:57 packer: 2016/11/13 21:21:57 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:02 packer: 2016/11/13 21:22:02 opening new ssh session
+2016/11/13 21:22:02 packer: 2016/11/13 21:22:02 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:02 packer: 2016/11/13 21:22:02 opening new ssh session
+2016/11/13 21:22:02 packer: 2016/11/13 21:22:02 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:03 packer: 2016/11/13 21:22:03 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:08 packer: 2016/11/13 21:22:08 opening new ssh session
+2016/11/13 21:22:08 packer: 2016/11/13 21:22:08 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:08 packer: 2016/11/13 21:22:08 opening new ssh session
+2016/11/13 21:22:08 packer: 2016/11/13 21:22:08 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:08 packer: 2016/11/13 21:22:08 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:13 packer: 2016/11/13 21:22:13 opening new ssh session
+2016/11/13 21:22:13 packer: 2016/11/13 21:22:13 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:13 packer: 2016/11/13 21:22:13 opening new ssh session
+2016/11/13 21:22:13 packer: 2016/11/13 21:22:13 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:14 packer: 2016/11/13 21:22:14 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:19 packer: 2016/11/13 21:22:19 opening new ssh session
+2016/11/13 21:22:19 packer: 2016/11/13 21:22:19 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:19 packer: 2016/11/13 21:22:19 opening new ssh session
+2016/11/13 21:22:19 packer: 2016/11/13 21:22:19 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:19 packer: 2016/11/13 21:22:19 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:24 packer: 2016/11/13 21:22:24 opening new ssh session
+2016/11/13 21:22:24 packer: 2016/11/13 21:22:24 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:24 packer: 2016/11/13 21:22:24 opening new ssh session
+2016/11/13 21:22:24 packer: 2016/11/13 21:22:24 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:25 packer: 2016/11/13 21:22:25 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:30 packer: 2016/11/13 21:22:30 opening new ssh session
+2016/11/13 21:22:30 packer: 2016/11/13 21:22:30 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:30 packer: 2016/11/13 21:22:30 opening new ssh session
+2016/11/13 21:22:30 packer: 2016/11/13 21:22:30 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:30 packer: 2016/11/13 21:22:30 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:35 packer: 2016/11/13 21:22:35 opening new ssh session
+2016/11/13 21:22:35 packer: 2016/11/13 21:22:35 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:35 packer: 2016/11/13 21:22:35 opening new ssh session
+2016/11/13 21:22:35 packer: 2016/11/13 21:22:35 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:36 packer: 2016/11/13 21:22:36 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:41 packer: 2016/11/13 21:22:41 opening new ssh session
+2016/11/13 21:22:41 packer: 2016/11/13 21:22:41 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:41 packer: 2016/11/13 21:22:41 opening new ssh session
+2016/11/13 21:22:41 packer: 2016/11/13 21:22:41 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:41 packer: 2016/11/13 21:22:41 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:46 packer: 2016/11/13 21:22:46 opening new ssh session
+2016/11/13 21:22:46 packer: 2016/11/13 21:22:46 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:46 packer: 2016/11/13 21:22:46 opening new ssh session
+2016/11/13 21:22:46 packer: 2016/11/13 21:22:46 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:47 packer: 2016/11/13 21:22:47 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:52 packer: 2016/11/13 21:22:52 opening new ssh session
+2016/11/13 21:22:52 packer: 2016/11/13 21:22:52 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:52 packer: 2016/11/13 21:22:52 opening new ssh session
+2016/11/13 21:22:52 packer: 2016/11/13 21:22:52 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:52 packer: 2016/11/13 21:22:52 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:22:57 packer: 2016/11/13 21:22:57 opening new ssh session
+2016/11/13 21:22:57 packer: 2016/11/13 21:22:57 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:22:57 packer: 2016/11/13 21:22:57 opening new ssh session
+2016/11/13 21:22:57 packer: 2016/11/13 21:22:57 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:22:58 packer: 2016/11/13 21:22:58 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:03 packer: 2016/11/13 21:23:03 opening new ssh session
+2016/11/13 21:23:03 packer: 2016/11/13 21:23:03 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:03 packer: 2016/11/13 21:23:03 opening new ssh session
+2016/11/13 21:23:03 packer: 2016/11/13 21:23:03 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:03 packer: 2016/11/13 21:23:03 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:08 packer: 2016/11/13 21:23:08 opening new ssh session
+2016/11/13 21:23:08 packer: 2016/11/13 21:23:08 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:09 packer: 2016/11/13 21:23:09 opening new ssh session
+2016/11/13 21:23:09 packer: 2016/11/13 21:23:09 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:09 packer: 2016/11/13 21:23:09 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:14 packer: 2016/11/13 21:23:14 opening new ssh session
+2016/11/13 21:23:14 packer: 2016/11/13 21:23:14 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:14 packer: 2016/11/13 21:23:14 opening new ssh session
+2016/11/13 21:23:14 packer: 2016/11/13 21:23:14 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:14 packer: 2016/11/13 21:23:14 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:19 packer: 2016/11/13 21:23:19 opening new ssh session
+2016/11/13 21:23:19 packer: 2016/11/13 21:23:19 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:20 packer: 2016/11/13 21:23:20 opening new ssh session
+2016/11/13 21:23:20 packer: 2016/11/13 21:23:20 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:20 packer: 2016/11/13 21:23:20 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:25 packer: 2016/11/13 21:23:25 opening new ssh session
+2016/11/13 21:23:25 packer: 2016/11/13 21:23:25 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:25 packer: 2016/11/13 21:23:25 opening new ssh session
+2016/11/13 21:23:25 packer: 2016/11/13 21:23:25 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:25 packer: 2016/11/13 21:23:25 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:31 packer: 2016/11/13 21:23:31 opening new ssh session
+2016/11/13 21:23:31 packer: 2016/11/13 21:23:31 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:31 packer: 2016/11/13 21:23:31 opening new ssh session
+2016/11/13 21:23:31 packer: 2016/11/13 21:23:31 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:31 packer: 2016/11/13 21:23:31 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:36 packer: 2016/11/13 21:23:36 opening new ssh session
+2016/11/13 21:23:36 packer: 2016/11/13 21:23:36 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:36 packer: 2016/11/13 21:23:36 opening new ssh session
+2016/11/13 21:23:36 packer: 2016/11/13 21:23:36 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:37 packer: 2016/11/13 21:23:37 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:42 packer: 2016/11/13 21:23:42 opening new ssh session
+2016/11/13 21:23:42 packer: 2016/11/13 21:23:42 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:42 packer: 2016/11/13 21:23:42 opening new ssh session
+2016/11/13 21:23:42 packer: 2016/11/13 21:23:42 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:42 packer: 2016/11/13 21:23:42 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:47 packer: 2016/11/13 21:23:47 opening new ssh session
+2016/11/13 21:23:47 packer: 2016/11/13 21:23:47 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:47 packer: 2016/11/13 21:23:47 opening new ssh session
+2016/11/13 21:23:47 packer: 2016/11/13 21:23:47 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:48 packer: 2016/11/13 21:23:48 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:53 packer: 2016/11/13 21:23:53 opening new ssh session
+2016/11/13 21:23:53 packer: 2016/11/13 21:23:53 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:53 packer: 2016/11/13 21:23:53 opening new ssh session
+2016/11/13 21:23:53 packer: 2016/11/13 21:23:53 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:53 packer: 2016/11/13 21:23:53 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:23:58 packer: 2016/11/13 21:23:58 opening new ssh session
+2016/11/13 21:23:58 packer: 2016/11/13 21:23:58 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:23:59 packer: 2016/11/13 21:23:59 opening new ssh session
+2016/11/13 21:23:59 packer: 2016/11/13 21:23:59 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:23:59 packer: 2016/11/13 21:23:59 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:04 packer: 2016/11/13 21:24:04 opening new ssh session
+2016/11/13 21:24:04 packer: 2016/11/13 21:24:04 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:04 packer: 2016/11/13 21:24:04 opening new ssh session
+2016/11/13 21:24:04 packer: 2016/11/13 21:24:04 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:04 packer: 2016/11/13 21:24:04 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:09 packer: 2016/11/13 21:24:09 opening new ssh session
+2016/11/13 21:24:09 packer: 2016/11/13 21:24:09 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:10 packer: 2016/11/13 21:24:10 opening new ssh session
+2016/11/13 21:24:10 packer: 2016/11/13 21:24:10 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:10 packer: 2016/11/13 21:24:10 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:15 packer: 2016/11/13 21:24:15 opening new ssh session
+2016/11/13 21:24:15 packer: 2016/11/13 21:24:15 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:15 packer: 2016/11/13 21:24:15 opening new ssh session
+2016/11/13 21:24:15 packer: 2016/11/13 21:24:15 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:16 packer: 2016/11/13 21:24:16 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:21 packer: 2016/11/13 21:24:21 opening new ssh session
+2016/11/13 21:24:21 packer: 2016/11/13 21:24:21 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:21 packer: 2016/11/13 21:24:21 opening new ssh session
+2016/11/13 21:24:21 packer: 2016/11/13 21:24:21 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:21 packer: 2016/11/13 21:24:21 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:26 packer: 2016/11/13 21:24:26 opening new ssh session
+2016/11/13 21:24:26 packer: 2016/11/13 21:24:26 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:26 packer: 2016/11/13 21:24:26 opening new ssh session
+2016/11/13 21:24:26 packer: 2016/11/13 21:24:26 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:27 packer: 2016/11/13 21:24:27 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:32 packer: 2016/11/13 21:24:32 opening new ssh session
+2016/11/13 21:24:32 packer: 2016/11/13 21:24:32 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:32 packer: 2016/11/13 21:24:32 opening new ssh session
+2016/11/13 21:24:32 packer: 2016/11/13 21:24:32 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:32 packer: 2016/11/13 21:24:32 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:37 packer: 2016/11/13 21:24:37 opening new ssh session
+2016/11/13 21:24:37 packer: 2016/11/13 21:24:37 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:37 packer: 2016/11/13 21:24:37 opening new ssh session
+2016/11/13 21:24:37 packer: 2016/11/13 21:24:37 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:38 packer: 2016/11/13 21:24:38 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:43 packer: 2016/11/13 21:24:43 opening new ssh session
+2016/11/13 21:24:43 packer: 2016/11/13 21:24:43 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:43 packer: 2016/11/13 21:24:43 opening new ssh session
+2016/11/13 21:24:43 packer: 2016/11/13 21:24:43 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:43 packer: 2016/11/13 21:24:43 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:48 packer: 2016/11/13 21:24:48 opening new ssh session
+2016/11/13 21:24:48 packer: 2016/11/13 21:24:48 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:49 packer: 2016/11/13 21:24:49 opening new ssh session
+2016/11/13 21:24:49 packer: 2016/11/13 21:24:49 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:49 packer: 2016/11/13 21:24:49 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:54 packer: 2016/11/13 21:24:54 opening new ssh session
+2016/11/13 21:24:54 packer: 2016/11/13 21:24:54 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:24:54 packer: 2016/11/13 21:24:54 opening new ssh session
+2016/11/13 21:24:54 packer: 2016/11/13 21:24:54 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:24:54 packer: 2016/11/13 21:24:54 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:24:59 packer: 2016/11/13 21:24:59 opening new ssh session
+2016/11/13 21:24:59 packer: 2016/11/13 21:24:59 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:00 packer: 2016/11/13 21:25:00 opening new ssh session
+2016/11/13 21:25:00 packer: 2016/11/13 21:25:00 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:00 packer: 2016/11/13 21:25:00 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:05 packer: 2016/11/13 21:25:05 opening new ssh session
+2016/11/13 21:25:05 packer: 2016/11/13 21:25:05 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:05 packer: 2016/11/13 21:25:05 opening new ssh session
+2016/11/13 21:25:05 packer: 2016/11/13 21:25:05 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:06 packer: 2016/11/13 21:25:06 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:11 packer: 2016/11/13 21:25:11 opening new ssh session
+2016/11/13 21:25:11 packer: 2016/11/13 21:25:11 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:11 packer: 2016/11/13 21:25:11 opening new ssh session
+2016/11/13 21:25:11 packer: 2016/11/13 21:25:11 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:11 packer: 2016/11/13 21:25:11 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:16 packer: 2016/11/13 21:25:16 opening new ssh session
+2016/11/13 21:25:16 packer: 2016/11/13 21:25:16 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:17 packer: 2016/11/13 21:25:17 opening new ssh session
+2016/11/13 21:25:17 packer: 2016/11/13 21:25:17 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:17 packer: 2016/11/13 21:25:17 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:22 packer: 2016/11/13 21:25:22 opening new ssh session
+2016/11/13 21:25:22 packer: 2016/11/13 21:25:22 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:22 packer: 2016/11/13 21:25:22 opening new ssh session
+2016/11/13 21:25:22 packer: 2016/11/13 21:25:22 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:22 packer: 2016/11/13 21:25:22 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:27 packer: 2016/11/13 21:25:27 opening new ssh session
+2016/11/13 21:25:27 packer: 2016/11/13 21:25:27 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:28 packer: 2016/11/13 21:25:28 opening new ssh session
+2016/11/13 21:25:28 packer: 2016/11/13 21:25:28 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:28 packer: 2016/11/13 21:25:28 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:33 packer: 2016/11/13 21:25:33 opening new ssh session
+2016/11/13 21:25:33 packer: 2016/11/13 21:25:33 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:33 packer: 2016/11/13 21:25:33 opening new ssh session
+2016/11/13 21:25:33 packer: 2016/11/13 21:25:33 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:34 packer: 2016/11/13 21:25:34 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:39 packer: 2016/11/13 21:25:39 opening new ssh session
+2016/11/13 21:25:39 packer: 2016/11/13 21:25:39 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:39 packer: 2016/11/13 21:25:39 opening new ssh session
+2016/11/13 21:25:39 packer: 2016/11/13 21:25:39 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:39 packer: 2016/11/13 21:25:39 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:44 packer: 2016/11/13 21:25:44 opening new ssh session
+2016/11/13 21:25:44 packer: 2016/11/13 21:25:44 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:44 packer: 2016/11/13 21:25:44 opening new ssh session
+2016/11/13 21:25:44 packer: 2016/11/13 21:25:44 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:45 packer: 2016/11/13 21:25:45 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:50 packer: 2016/11/13 21:25:50 opening new ssh session
+2016/11/13 21:25:50 packer: 2016/11/13 21:25:50 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:50 packer: 2016/11/13 21:25:50 opening new ssh session
+2016/11/13 21:25:50 packer: 2016/11/13 21:25:50 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:50 packer: 2016/11/13 21:25:50 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:25:55 packer: 2016/11/13 21:25:55 opening new ssh session
+2016/11/13 21:25:55 packer: 2016/11/13 21:25:55 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:25:56 packer: 2016/11/13 21:25:56 opening new ssh session
+2016/11/13 21:25:56 packer: 2016/11/13 21:25:56 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:25:56 packer: 2016/11/13 21:25:56 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:26:01 packer: 2016/11/13 21:26:01 opening new ssh session
+2016/11/13 21:26:01 packer: 2016/11/13 21:26:01 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:26:01 packer: 2016/11/13 21:26:01 opening new ssh session
+2016/11/13 21:26:01 packer: 2016/11/13 21:26:01 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:26:01 packer: 2016/11/13 21:26:01 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:26:06 packer: 2016/11/13 21:26:06 opening new ssh session
+2016/11/13 21:26:06 packer: 2016/11/13 21:26:06 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:26:07 packer: 2016/11/13 21:26:07 opening new ssh session
+2016/11/13 21:26:07 packer: 2016/11/13 21:26:07 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:26:07 packer: 2016/11/13 21:26:07 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:26:12 packer: 2016/11/13 21:26:12 opening new ssh session
+2016/11/13 21:26:12 packer: 2016/11/13 21:26:12 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:26:12 packer: 2016/11/13 21:26:12 opening new ssh session
+2016/11/13 21:26:12 packer: 2016/11/13 21:26:12 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:26:14 packer: 2016/11/13 21:26:14 Timeout connecting to 192.168.1.120
+2016/11/13 21:26:14 packer: 2016/11/13 21:26:14 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:26:19 packer: 2016/11/13 21:26:19 opening new ssh session
+2016/11/13 21:26:19 packer: 2016/11/13 21:26:19 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:26:20 packer: 2016/11/13 21:26:20 opening new ssh session
+2016/11/13 21:26:20 packer: 2016/11/13 21:26:20 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:26:22 packer: 2016/11/13 21:26:22 Timeout connecting to 192.168.1.120
+2016/11/13 21:26:22 packer: 2016/11/13 21:26:22 [DEBUG] Error getting SSH address: No interface on the VM has an IP address ready
+2016/11/13 21:26:27 packer: 2016/11/13 21:26:27 opening new ssh session
+2016/11/13 21:26:27 packer: 2016/11/13 21:26:27 starting remote command: esxcli --formatter csv network vm list
+2016/11/13 21:26:27 packer: 2016/11/13 21:26:27 opening new ssh session
+2016/11/13 21:26:27 packer: 2016/11/13 21:26:27 starting remote command: esxcli --formatter csv network vm port list -w 123809900
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [INFO] Attempting SSH connection...
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 reconnecting to TCP connection for SSH
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 handshaking with SSH
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 handshake complete!
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 opening new ssh session
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [INFO] agent forwarding enabled
+2016/11/13 21:26:28 ui: [1;32m==> vmware-iso: Connected to SSH![0m
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 opening new ssh session
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 starting remote command: vim-cmd vmsvc/tools.install 108
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Running the provision hook
+2016/11/13 21:26:28 ui: [1;32m==> vmware-iso: Provisioning with shell script: scripts/base.sh[0m
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Opening scripts/base.sh for reading
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 opening new ssh session
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Starting remote scp process:  scp -vt /tmp
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Started SCP session, beginning transfers...
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Copying input data into temporary file so we can read the length
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [INFO] 1063 bytes written for 'uploadData'
+2016/11/13 21:26:28 [INFO] 1063 bytes written for 'uploadData'
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [DEBUG] scp: Uploading script_8138.sh: perms=C0644 size=1063
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 SCP session complete, closing stdin pipe.
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 Waiting for SSH session to complete.
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 scp stderr (length 32): Sink: C0644 1063 script_8138.sh
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 opening new ssh session
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 starting remote command: chmod 0755 /tmp/script_8138.sh
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:28 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:28 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 opening new ssh session
+2016/11/13 21:26:28 packer: 2016/11/13 21:26:28 starting remote command: echo 'vagrant'|sudo -S sh '/tmp/script_8138.sh'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:26:29 [INFO] 0 bytes written for 'stderr'
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 0 bytes written for 'stderr'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: rm -f /tmp/script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 ui: [1;32m==> vmware-iso: Provisioning with shell script: scripts/vagrant.sh[0m
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Opening scripts/vagrant.sh for reading
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Starting remote scp process:  scp -vt /tmp
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Started SCP session, beginning transfers...
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Copying input data into temporary file so we can read the length
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 281 bytes written for 'uploadData'
+2016/11/13 21:26:29 [INFO] 281 bytes written for 'uploadData'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [DEBUG] scp: Uploading script_8138.sh: perms=C0644 size=281
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 SCP session complete, closing stdin pipe.
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Waiting for SSH session to complete.
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 scp stderr (length 31): Sink: C0644 281 script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: chmod 0755 /tmp/script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: echo 'vagrant'|sudo -S sh '/tmp/script_8138.sh'
+2016/11/13 21:26:29 ui: [0;32m    vmware-iso: % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current[0m
+2016/11/13 21:26:29 ui: [0;32m    vmware-iso: Dload  Upload   Total   Spent    Left  Speed[0m
+2016/11/13 21:26:29 ui: [0;32m    vmware-iso: 102   409  102   409    0     0   1488      0 --:--:-- --:--:-- --:--:--  5177[0m
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:26:29 [INFO] 317 bytes written for 'stderr'
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 317 bytes written for 'stderr'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: rm -f /tmp/script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 ui: [1;32m==> vmware-iso: Provisioning with shell script: scripts/cleanup.sh[0m
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Opening scripts/cleanup.sh for reading
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] 307 bytes written for 'uploadData'
+2016/11/13 21:26:29 [INFO] 307 bytes written for 'uploadData'
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Starting remote scp process:  scp -vt /tmp
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Started SCP session, beginning transfers...
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Copying input data into temporary file so we can read the length
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [DEBUG] scp: Uploading script_8138.sh: perms=C0644 size=307
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 SCP session complete, closing stdin pipe.
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 Waiting for SSH session to complete.
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 scp stderr (length 31): Sink: C0644 307 script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: chmod 0755 /tmp/script_8138.sh
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 opening new ssh session
+2016/11/13 21:26:29 packer: 2016/11/13 21:26:29 starting remote command: echo 'vagrant'|sudo -S sh '/tmp/script_8138.sh'
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/weak-updates failed: No such file or directory[0m
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/modules.order failed: No such file or directory[0m
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/modules.networking failed: No such file or directory[0m
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/modules.modesetting failed: No such file or directory[0m
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/modules.drm failed: No such file or directory[0m
+2016/11/13 21:26:30 ui: [0;32m    vmware-iso: warning:    erase unlink of /lib/modules/2.6.32-573.el6.x86_64/modules.block failed: No such file or directory[0m
+2016/11/13 21:26:32 ui: [0;32m    vmware-iso: Loaded plugins: product-id, search-disabled-repos, subscription-manager[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: Cleaning repos: rhel-6-server-optional-rpms rhel-6-server-rpms[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: : rhel-ha-for-rhel-6-server-rpms rhel-hpn-for-rhel-6-server-rpms[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: : rhel-lb-for-rhel-6-server-rpms rhel-rs-for-rhel-6-server-rpms[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: : rhel-scalefs-for-rhel-6-server-rpms rhel-server-dts-6-rpms[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: : rhel-server-dts2-6-rpms rhel-server-rhscl-6-rpms[0m
+2016/11/13 21:26:34 ui: [0;32m    vmware-iso: Cleaning up Everything[0m
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] 455 bytes written for 'stdout'
+2016/11/13 21:26:34 [INFO] 674 bytes written for 'stderr'
+2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] 455 bytes written for 'stdout'
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] 674 bytes written for 'stderr'
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 opening new ssh session
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 starting remote command: rm -f /tmp/script_8138.sh
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 ui: [1;32m==> vmware-iso: Provisioning with shell script: scripts/zerodisk.sh[0m
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 Opening scripts/zerodisk.sh for reading
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 opening new ssh session
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 Starting remote scp process:  scp -vt /tmp
+2016/11/13 21:26:34 [INFO] 129 bytes written for 'uploadData'
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] 129 bytes written for 'uploadData'
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 Started SCP session, beginning transfers...
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 Copying input data into temporary file so we can read the length
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [DEBUG] scp: Uploading script_8138.sh: perms=C0644 size=129
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 SCP session complete, closing stdin pipe.
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 Waiting for SSH session to complete.
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 scp stderr (length 31): Sink: C0644 129 script_8138.sh
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 opening new ssh session
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 starting remote command: chmod 0755 /tmp/script_8138.sh
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 opening new ssh session
+2016/11/13 21:26:34 packer: 2016/11/13 21:26:34 starting remote command: echo 'vagrant'|sudo -S sh '/tmp/script_8138.sh'
+2016/11/13 21:28:35 ui: [0;32m    vmware-iso: dd: writing `/EMPTY': No space left on device[0m
+2016/11/13 21:28:35 ui: [0;32m    vmware-iso: 17596+0 records in[0m
+2016/11/13 21:28:35 ui: [0;32m    vmware-iso: 17595+0 records out[0m
+2016/11/13 21:28:35 ui: [0;32m    vmware-iso: 18450042880 bytes (18 GB) copied, 120.393 s, 153 MB/s[0m
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:28:36 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:28:36 [INFO] 139 bytes written for 'stderr'
+2016/11/13 21:28:36 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:28:36 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] 0 bytes written for 'stdout'
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] 139 bytes written for 'stderr'
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 opening new ssh session
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 starting remote command: rm -f /tmp/script_8138.sh
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:28:36 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:28:36 [INFO] RPC endpoint: Communicator ended with: 0
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 [INFO] RPC client: Communicator ended with: 0
+2016/11/13 21:28:36 ui: [1;32m==> vmware-iso: Gracefully halting virtual machine...[0m
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 Executing shutdown command: echo 'vagrant' | sudo -S shutdown -P now
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 opening new ssh session
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 starting remote command: echo 'vagrant' | sudo -S shutdown -P now
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 Shutdown stdout:
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 Shutdown stderr:
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 Waiting max 5m0s for shutdown to complete
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 opening new ssh session
+2016/11/13 21:28:36 packer: 2016/11/13 21:28:36 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:37 packer: 2016/11/13 21:28:37 opening new ssh session
+2016/11/13 21:28:37 packer: 2016/11/13 21:28:37 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:38 packer: 2016/11/13 21:28:38 opening new ssh session
+2016/11/13 21:28:38 packer: 2016/11/13 21:28:38 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:38 packer: 2016/11/13 21:28:38 opening new ssh session
+2016/11/13 21:28:38 packer: 2016/11/13 21:28:38 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:39 packer: 2016/11/13 21:28:39 opening new ssh session
+2016/11/13 21:28:39 packer: 2016/11/13 21:28:39 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:39 packer: 2016/11/13 21:28:39 opening new ssh session
+2016/11/13 21:28:39 packer: 2016/11/13 21:28:39 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:40 packer: 2016/11/13 21:28:40 opening new ssh session
+2016/11/13 21:28:40 packer: 2016/11/13 21:28:40 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:41 packer: 2016/11/13 21:28:41 opening new ssh session
+2016/11/13 21:28:41 packer: 2016/11/13 21:28:41 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:41 packer: 2016/11/13 21:28:41 opening new ssh session
+2016/11/13 21:28:41 packer: 2016/11/13 21:28:41 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:42 ui: [0;32m    vmware-iso: Waiting for VMware to clean up after itself...[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 starting remote command: ls -1p /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 No more lock files found. VMware is clean.
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 VM shut down.
+2016/11/13 21:28:42 ui: [1;32m==> vmware-iso: Deleting unnecessary VMware files...[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 starting remote command: ls -1p /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:28:42 ui: [0;32m    vmware-iso: Deleting: /vmfs/volumes/SSDstore02/output-vmware-iso/vmware.log[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 starting remote command: rm /vmfs/volumes/SSDstore02/output-vmware-iso/vmware.log
+2016/11/13 21:28:42 ui: [1;32m==> vmware-iso: Compacting the disk image[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Writing VMX to: /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-vmx108899353/packer-vmware-iso.vmx
+2016/11/13 21:28:42 ui: [1;32m==> vmware-iso: Cleaning VMX prior to finishing up...[0m
+2016/11/13 21:28:42 ui: [0;32m    vmware-iso: Unmounting floppy from VMX...[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Deleting key: floppy0.present
+2016/11/13 21:28:42 ui: [0;32m    vmware-iso: Detaching ISO from CD-ROM device...[0m
+2016/11/13 21:28:42 ui: [0;32m    vmware-iso: Disabling VNC server...[0m
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Writing VMX to: /var/folders/5j/0px2g4mj7bz90g143t0n2drwp42vm9/T/packer-vmx108899353/packer-vmware-iso.vmx
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Starting remote scp process:  scp -vt /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Started SCP session, beginning transfers...
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Copying input data into temporary file so we can read the length
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 [DEBUG] scp: Uploading packer-vmware-iso.vmx: perms=C0644 size=2391
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 SCP session complete, closing stdin pipe.
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 Waiting for SSH session to complete.
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 scp stderr (length 39): Sink: C0644 2391 packer-vmware-iso.vmx
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 opening new ssh session
+2016/11/13 21:28:42 packer: 2016/11/13 21:28:42 starting remote command: vim-cmd vmsvc/reload 108
+2016/11/13 21:28:43 packer: 2016/11/13 21:28:43 opening new ssh session
+2016/11/13 21:28:43 packer: 2016/11/13 21:28:43 starting remote command: vim-cmd vmsvc/power.getstate 108
+2016/11/13 21:28:43 ui: [1;32m==> vmware-iso: Keeping virtual machine registered with ESX host (keep_registered = true)[0m
+2016/11/13 21:28:43 packer: 2016/11/13 21:28:43 opening new ssh session
+2016/11/13 21:28:43 packer: 2016/11/13 21:28:43 starting remote command: ls -1p /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:28:44 ui: [1;32m==> vmware-iso: Running post-processor: vsphere[0m
+2016/11/13 21:28:44 ui: [0;32m    vmware-iso (vsphere): Uploading /vmfs/volumes/SSDstore02/output-vmware-iso/packer-vmware-iso.vmx to vSphere[0m
+2016/11/13 21:28:44 packer: 2016/11/13 21:28:44 Starting ovftool with parameters: --acceptAllEulas --name=rhel_test --datastore=SSDstore02 --noSSLVerify=true --diskMode=thin --vmFolder=Packer --network=VM Network --overwrite /vmfs/volumes/SSDstore02/output-vmware-iso/packer-vmware-iso.vmx vi://root:th1nkp4d@192.168.1.2/REESE/host/3031
+2016/11/13 21:28:44 Deleting original artifact for build 'vmware-iso'
+2016/11/13 21:28:44 packer: 2016/11/13 21:28:44 opening new ssh session
+2016/11/13 21:28:44 packer: 2016/11/13 21:28:44 starting remote command: rm -rf /vmfs/volumes/SSDstore02/output-vmware-iso
+2016/11/13 21:28:44 ui error: [1;31mBuild 'vmware-iso' errored: 1 error(s) occurred:
+
+* Post-processor failed: Failed: exit status 1
+[0m
+2016/11/13 21:28:44 Builds completed. Waiting on interrupt barrier...
+2016/11/13 21:28:44 machine readable: error-count []string{"1"}
+2016/11/13 21:28:44 ui error: 
+==> Some builds didn't complete successfully and had errors:
+2016/11/13 21:28:44 machine readable: vmware-iso,error []string{"1 error(s) occurred:\n\n* Post-processor failed: Failed: exit status 1\n"}
+2016/11/13 21:28:44 ui error: --> vmware-iso: 1 error(s) occurred:
+
+* Post-processor failed: Failed: exit status 1
+2016/11/13 21:28:44 ui: 
+==> Builds finished but no artifacts were created.
+2016/11/13 21:28:44 waiting for all plugin processes to complete...
+2016/11/13 21:28:44 /usr/local/Cellar/packer/0.11.0/bin/packer: plugin process exited
+2016/11/13 21:28:44 /usr/local/Cellar/packer/0.11.0/bin/packer: plugin process exited
+2016/11/13 21:28:44 /usr/local/Cellar/packer/0.11.0/bin/packer: plugin process exited

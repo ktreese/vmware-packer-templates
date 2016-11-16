@@ -21,6 +21,8 @@ $ add.sh                                         add vagrant box
 $ vagrant up                                     boot based of distributed Vagrantfile
 $ vagrant ssh                                    ssh into the vagrant machine
 ```
+# User Variables
+`$ packer build -var 'vmware_password=foo' template.json`
 
 # Example Run
 ```

@@ -1,56 +1,60 @@
 {
+  "variables": {
+    "vmware_password": ""
+  },
   "provisioners": [
     {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
-      "override": {
-        "virtualbox-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/virtualbox.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
-          ]
-        }
-      }
-    }
-  ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "override": {
-        "virtualbox": {
-          "output": "wwt-rhel-6-x64-virtualbox.box"
-        }
-      }
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/cleanup.sh",
+        "scripts/zerodisk.sh"
+      ]
     }
   ],
   "builders": [
     {
-      "type": "virtualbox-iso",
+      "type": "vmware-iso",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 40520,
-      "guest_os_type": "RedHat_64",
+      "disk_size": 20480,
+      "guest_os_type": "rhel6-64",
+      "headless": true,
       "http_directory": "http",
       "iso_url": "/Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso",
       "iso_checksum": "a2bc9de743bfb0bfe1f14676a46a624b",
-      "iso_checksum_type": "md5",
+      "iso_checksum_type": "none",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",
-      "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "512" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
-      ],
-      "headless": "true"
+      "skip_compaction": false,
+      "remote_type": "esx5",
+      "remote_host": "192.168.1.2",
+      "remote_username": "root",
+      "remote_password": "{{user `vmware_password`}}",
+      "remote_datastore": "SSDstore02",
+      "remote_cache_datastore": "isostore",
+      "remote_cache_directory": "redhat",
+      "keep_registered": "true",
+      "tools_upload_flavor": "linux",
+      "vm_name": "redhat6",
+      "vmx_data": {
+        "ethernet0.networkName": "VM Network",
+        "ethernet0.present": "TRUE",
+        "ethernet0.virtualDev": "vmxnet3",
+        "cpuid.coresPerSocket": "1",
+        "memsize": "512",
+        "numvcpus": "1",
+        "scsi0:0.fileName": "disk.vmdk",
+        "scsi0:0.present": "TRUE",
+        "scsi0:0.redo": ""
+      }
     }
   ]
 }
