@@ -11,8 +11,8 @@ Vagrant.configure(2) do |config|
     end
 
     # Specify box and assign a hostname
-    puppetmaster.vm.box = "wwt/2016pemaster"
-    puppetmaster.vm.hostname = "puppetmaster"
+    puppetmaster.vm.box = "wwt/puppetmaster"
+    puppetmaster.vm.hostname = "puppetmaster.wwt.com"
 
     # Network Configs
     puppetmaster.vm.network "private_network", ip: "10.10.10.10"
