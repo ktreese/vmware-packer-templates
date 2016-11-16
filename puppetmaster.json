@@ -56,14 +56,14 @@
     {
       "type": "virtualbox-iso",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg submgr_pass={{ user `submgr_pass` }}<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 40520,
       "guest_os_type": "RedHat_64",
       "http_directory": "http",
-      "iso_url": "/Users/reesek/Downloads/redhat/rhel-server-6.7-x86_64-dvd.iso",
-      "iso_checksum": "a2bc9de743bfb0bfe1f14676a46a624b",
+      "iso_url": "/Users/reesek/Downloads/redhat/rhel-server-6.8-x86_64-dvd.iso",
+      "iso_checksum": "ef0f3bbfbb846491a07e4a02b5d5640a",
       "iso_checksum_type": "md5",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
