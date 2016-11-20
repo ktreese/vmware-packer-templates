@@ -1,6 +1,7 @@
 {
   "variables": {
-    "vmware_password": ""
+    "vmware_password": "",
+    "submgr_pass": ""
   },
   "provisioners": [
     {
@@ -18,7 +19,7 @@
     {
       "type": "vmware-iso",
       "boot_command": [
-        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg<enter><wait>"
+        "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg submgr_pass={{ user `submgr_pass` }}<enter><wait>"
       ],
       "boot_wait": "10s",
       "disk_size": 20480,
