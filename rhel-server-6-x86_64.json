@@ -11,7 +11,7 @@
         "scripts/base.sh",
         "scripts/vagrant.sh",
         "scripts/cleanup.sh",
-        "scripts/zerodisk.sh"
+        "scripts/redhat-vmware-cleanup.sh"
       ]
     }
   ],
