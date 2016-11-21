@@ -1,10 +1,7 @@
 #!/bin/bash
-sudo mkdir /mnt/cdrom 
-sudo mount -o loop /tmp/vmware-tools-linux.iso /mnt/cdrom
-sudo cp /mnt/cdrom/VMwareTools*.tar.gz /tmp/
-cd /tmp
+cd /var/tmp
 tar xfz VMwareTools*.tar.gz
-cd /tmp/vmware-tools-distrib
+cd /var/tmp/vmware-tools-distrib
 ls -la
 
 # from http://www.virtuallyghetto.com/2015/06/automating-silent-installation-of-vmware-tools-on-linux-wautomatic-kernel-modules.html
@@ -35,8 +32,6 @@ __ANSWER__
 
 sudo /tmp/vmware-tools-distrib/vmware-install.pl < /tmp/answer
 
-sudo umount /mnt/cdrom
-cd /tmp
+cd /var/tmp
 rm -rf vmware-tools-distrib
 rm -f VMwareTools*.tar.gz
-rm /tmp/vmware-tools-linux.iso
