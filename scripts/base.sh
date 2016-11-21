@@ -15,5 +15,3 @@ MOTD
 # Set pretty prompt; borrow from STLPUG and change prompt prefix
 curl -so /etc/profile.d/prompt.sh https://gist.githubusercontent.com/ktreese/1ad2dc99aa2840b9e80d/raw/d37451ffc0f6ea54d6ba046ea661f8893744b16f/prompt.sh
 sed -i -e 's/STLPUG/WWT/g' /etc/profile.d/prompt.sh
-
-sleep 600
