@@ -30,7 +30,7 @@ no
 
 __ANSWER__
 
-sudo /tmp/vmware-tools-distrib/vmware-install.pl < /tmp/answer
+sudo /var/tmp/vmware-tools-distrib/vmware-install.pl < /tmp/answer
 
 cd /var/tmp
 rm -rf vmware-tools-distrib

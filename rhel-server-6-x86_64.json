@@ -5,12 +5,17 @@
   },
   "provisioners": [
     {
+      "type": "file",
+      "source": "files/VMwareTools-9.4.12-2627939.tar.gz",
+      "destination": "/var/tmp/VMwareTools-9.4.12-2627939.tar.gz"
+    },
+    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "scripts": [
         "scripts/base.sh",
         "scripts/vagrant.sh",
-        "scripts/cleanup.sh",
+	"scripts/redhat-vmware-tools_install.sh",
         "scripts/redhat-vmware-cleanup.sh"
       ]
     }
@@ -35,6 +40,7 @@
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
       "skip_compaction": false,
+      "output_directory": "testing",
       "remote_type": "esx5",
       "remote_host": "192.168.1.2",
       "remote_username": "root",

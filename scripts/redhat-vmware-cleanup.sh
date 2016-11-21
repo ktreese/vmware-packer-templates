@@ -3,6 +3,12 @@
 # (http://lonesysadmin.net/2013/03/26/preparing-linux-template-vms/) article
 # by Bob Plankers, thanks Bob!
 
+# yum update is run in %post; clean up old kernel remnants
+if [ $(rpm -qa | grep "^kernel-[0-9]" | wc -l) -eq 2 ]; then
+  rpm -e kernel-2.6.32-642.el6.x86_64
+  rpm -e kernel-devel-2.6.32-642.el6.x86_64
+fi
+
 CLEANUP_PAUSE=${CLEANUP_PAUSE:-0}
 echo "==> Pausing for ${CLEANUP_PAUSE} seconds..."
 sleep ${CLEANUP_PAUSE}
