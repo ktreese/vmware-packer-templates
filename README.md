@@ -24,6 +24,14 @@ $ vagrant ssh                                    ssh into the vagrant machine
 # User Variables
 `$ packer build -var 'vmware_password=foo' template.json`
 
+Install https://github.com/nsidc/vagrant-vsphere plugin
+Create a dummy.box using the included metadata.json -> tar cvzf dummy.box ./metadata.json
+
+To use the Vagrantfile, set an export variable
+$ SUB_PASSWORD=vSphere_Password
+$ export SUB_PASSWORD
+$ vup vmwname
+
 # Example Run
 ```
 ➜  packer-templates git:(master) packer build rhel-server-7-x86_64.json
