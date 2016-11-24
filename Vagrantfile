@@ -1,29 +1,19 @@
-# -*- mode: ruby -*-
-# vi: set ft=ruby :
-
-Vagrant.configure(2) do |config|
-
+Vagrant.configure("2") do |config|
   config.vm.define "puppetmaster" do |puppetmaster|
-    # Set VM memory and cpu specs
-    puppetmaster.vm.provider "virtualbox" do |vb|
-      vb.memory = 2560
-      vb.cpus = 2
+    puppetmaster.vm.box = 'vmware/dummy'
+    puppetmaster.vm.box_url = './dummy.box'
+    puppetmaster.vm.hostname = 'vmwpuppetmaster'
+
+    puppetmaster.vm.provider :vsphere do |vsphere|
+      vsphere.host = '192.168.1.10'
+      vsphere.insecure = true
+      vsphere.compute_resource_name = '3031'
+      vsphere.template_name = 'Templates/redhat6'
+      vsphere.name = 'vmwansible'
+      vsphere.user = 'root'
+      vsphere.password = ENV['SUB_PASSWORD']
+      vsphere.memory_mb = 2048
+      vsphere.cpu_count = 2
     end
-
-    # Specify box and assign a hostname
-    puppetmaster.vm.box = "wwt/puppetmaster"
-    puppetmaster.vm.hostname = "puppetmaster.wwt.com"
-
-    # Network Configs
-    puppetmaster.vm.network "private_network", ip: "10.10.10.10"
-
-    # Port forwarding for installer app and console app
-    puppetmaster.vm.network "forwarded_port", guest: 3000, host: 3001
-    puppetmaster.vm.network "forwarded_port", guest: 8140, host: 8141
-    puppetmaster.vm.network "forwarded_port", guest: 443, host: 4443
-
-    # Deploy vgt environment puppet modules
-    puppetmaster.vm.provision :shell, :inline => "sudo /usr/local/bin/r10k deploy environment vgt -pv"
   end
-
 end
