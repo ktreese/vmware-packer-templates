@@ -1,4 +1,5 @@
 *.box
+*.tar.gz
 .vagrant
 .bundle
 packer_cache
