@@ -1,8 +1,14 @@
 {
   "variables": {
+    "vmware_password": "",
     "submgr_pass": ""
   },
   "provisioners": [
+    {
+      "type": "file",
+      "source": "files/VMwareTools-9.4.12-2627939.tar.gz",
+      "destination": "/var/tmp/VMwareTools-9.4.12-2627939.tar.gz"
+    },
     {
       "type": "file",
       "source": "files/puppetmaster.conf",
@@ -31,55 +37,57 @@
     {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
-      "override": {
-        "virtualbox-iso": {
-          "scripts": [
-            "scripts/base.sh",
-            "scripts/vagrant.sh",
-            "scripts/virtualbox.sh",
-            "scripts/puppet.sh",
-            "scripts/cleanup.sh",
-            "scripts/zerodisk.sh"
-          ]
-        }
-      }
-    }
-  ],
-  "post-processors": [
-    {
-      "type": "vagrant",
-      "override": {
-        "virtualbox": {
-          "output": "wwt-puppetmaster-2016.2.1-rhel-6-x64-virtualbox.box"
-        }
-      }
+      "scripts": [
+        "scripts/base.sh",
+        "scripts/vagrant.sh",
+        "scripts/puppet.sh",
+	"scripts/redhat-vmware-tools_install.sh",
+        "scripts/redhat-vmware-cleanup.sh"
+      ]
     }
   ],
   "builders": [
     {
-      "type": "virtualbox-iso",
+      "type": "vmware-iso",
       "boot_command": [
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg submgr_pass={{ user `submgr_pass` }}<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 40520,
-      "guest_os_type": "RedHat_64",
+      "disk_size": 20480,
+      "guest_os_type": "rhel6-64",
+      "headless": true,
       "http_directory": "http",
       "iso_url": "/Users/reesek/Downloads/redhat/rhel-server-6.8-x86_64-dvd.iso",
       "iso_checksum": "ef0f3bbfbb846491a07e4a02b5d5640a",
-      "iso_checksum_type": "md5",
+      "iso_checksum_type": "none",
       "ssh_username": "vagrant",
       "ssh_password": "vagrant",
       "ssh_port": 22,
       "ssh_wait_timeout": "10000s",
       "shutdown_command": "echo 'vagrant' | sudo -S shutdown -P now",
-      "guest_additions_path": "VBoxGuestAdditions_{{.Version}}.iso",
-      "virtualbox_version_file": ".vbox_version",
-      "vboxmanage": [
-        [ "modifyvm", "{{.Name}}", "--memory", "2560" ],
-        [ "modifyvm", "{{.Name}}", "--cpus", "2" ]
-      ],
-      "headless": "true"
+      "skip_compaction": false,
+      "output_directory": "puppetmaster_template",
+      "remote_type": "esx5",
+      "remote_host": "192.168.1.2",
+      "remote_username": "root",
+      "remote_password": "{{user `vmware_password`}}",
+      "remote_datastore": "SSDstore02",
+      "remote_cache_datastore": "isostore",
+      "remote_cache_directory": "redhat",
+      "keep_registered": "true",
+      "tools_upload_flavor": "linux",
+      "vm_name": "redhat6",
+      "vmx_data": {
+        "ethernet0.networkName": "VM Network",
+        "ethernet0.present": "TRUE",
+        "ethernet0.virtualDev": "vmxnet3",
+        "cpuid.coresPerSocket": "1",
+        "memsize": "512",
+        "numvcpus": "1",
+        "scsi0:0.fileName": "disk.vmdk",
+        "scsi0:0.present": "TRUE",
+        "scsi0:0.redo": ""
+      }
     }
   ]
 }
