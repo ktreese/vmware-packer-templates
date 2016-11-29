@@ -15,26 +15,6 @@
       "destination": "/tmp/puppetmaster.conf"
     },
     {
-      "type": "file",
-      "source": "files/r10k.yaml",
-      "destination": "/tmp/r10k.yaml"
-    },
-    {
-      "type": "file",
-      "source": "files/hiera.yaml",
-      "destination": "/tmp/hiera.yaml"
-    },
-    {
-      "type": "file",
-      "source": "files/eyaml_keys/",
-      "destination": "/tmp"
-    },
-    {
-      "type": "file",
-      "source": "files/github/",
-      "destination": "/tmp"
-    },
-    {
       "type": "shell",
       "execute_command": "echo 'vagrant'|sudo -S sh '{{.Path}}'",
       "scripts": [
@@ -76,14 +56,14 @@
       "remote_cache_directory": "redhat",
       "keep_registered": "true",
       "tools_upload_flavor": "linux",
-      "vm_name": "redhat6",
+      "vm_name": "puppetmaster",
       "vmx_data": {
         "ethernet0.networkName": "VM Network",
         "ethernet0.present": "TRUE",
         "ethernet0.virtualDev": "vmxnet3",
         "cpuid.coresPerSocket": "1",
-        "memsize": "512",
-        "numvcpus": "1",
+        "memsize": "4096",
+        "numvcpus": "2",
         "scsi0:0.fileName": "disk.vmdk",
         "scsi0:0.present": "TRUE",
         "scsi0:0.redo": ""
