@@ -1,19 +1,19 @@
-# packer-templates
+# vmware-packer-templates
 
-Builds a vagrant box for the virtualbox provider for specified os type:
+Builds a VMware virtual machine directly on a VMware vSphere Hypervisor via the [vmware-iso](https://www.packer.io/docs/builders/vmware-iso.html) VMware Packer Builder. Once VMs are created, they may be converted into templates and deployed directly to vSphere via vagrant, using the [vagrant-vsphere](https://github.com/nsidc/vagrant-vsphere) plugin.
 
 ##### Branch Descriptions
-Each branch represents the OS it is named after.  Following the quick and dirty example usage below will build a vagrant box for the os the branch represents.  Otherwise, here are some specifics as they pertain to certain branches:
+Each branch represents the OS or application it is named after.  Refer to the usage examples to conduct a build via packer. You'll of course need to plugin your environments specifications for those things I did not parameterize.
 
-- `master:` Contains just the README for now.  Each branch is intended to be long lived for the OS build is represents
+- `master:` Contains just the README for now.  Each branch is intended to be long lived for the build it represents
 
-- `developer:` Builds a Red Hat 6 virtualbox image based off a 6.7 ISO.  The build applies the latest available patches and package updates (including kernel revisions) via registration with the redhat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.  Once tested extensively, it will be merged into the `redhat6` branch
+- `redhat6:` Builds a Red Hat 6 virtual machine based off a 6.8 ISO.  The build applies the latest available patches and package updates (including kernel revisions) via registration with the Red Hat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.
 
-- `pe.2016.2.1.entitlement:` First build of a puppet master using an entitlement.  This completely removes the dependency on using CentOS repos for package installs.  Use of Red Hat Customer Portal is being tested before this gets merged into `pe.2016.2.1` and published for public consumption within the wwt-pe-master-vagrant project
+- `redhat7:` Builds a Red Hat 7 virtual machine based off a 7.2 ISO.  The build applies the latest available patches and package updates (including kernel revisions) via registration with the Red Hat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.
 
-- `pe.2016.2.1_raw:` A base installation/setup of Puppet Enterprise 2016.2.1 without any custom WWT configs built in.  If developer builds above pan out, this will need a little refactoring to also register directly with Red Hat Customer Portal
+- `pe.2016.2.1:` Using the same virtual machine packer build as `redhat6`, this deployment includes an additional puppet shell provisioner to install a base installation/setup of Puppet Enterprise 2016.2.1.
 
-##### Quick and dirty example usage:
+##### Usage Examples:
 ```
 $ packer validate rhel-server-7-x86_64.json      validate template syntax
 $ packer build rhel-server-7-x86_64.json         build a RedHat 7 vagrant box
