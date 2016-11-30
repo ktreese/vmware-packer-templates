@@ -11,6 +11,7 @@ Vagrant.configure("2") do |config|
       vsphere.compute_resource_name = '3031'
       vsphere.template_name = 'Templates/puppetmaster'
       vsphere.name = 'vmwpuppetmaster'
+      vsphere.vm_base_path = 'vagrant_deployments'
       vsphere.user = 'root'
       vsphere.password = ENV['SUB_PASSWORD']
       vsphere.memory_mb = 4096
