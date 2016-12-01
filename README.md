@@ -13,6 +13,8 @@ In order to make use of these packer templates, you'll need to install a few thi
  - Note: This requires [Nokogiri](http://nokogiri.org/)
 - Red Hat Enterprise Linux ISOs, free via [Red Hat Developers](http://developers.redhat.com/downloads/)
 - Credentials to a vSphere instance with proper access to create VMs and other administrative access
+- Enable GuestIPHack (consult [vmware-iso](https://www.packer.io/docs/builders/vmware-iso.html) for detail)
+ - `$ esxcli system settings advanced set -o /Net/GuestIPHack -i 1` 
 - A dummy vagrant vSphere box.  Create a file named `metadata.json` with the following content:
 ```json
 {
