@@ -54,8 +54,8 @@
         "ethernet0.present": "TRUE",
         "ethernet0.virtualDev": "vmxnet3",
         "cpuid.coresPerSocket": "1",
-        "memsize": "512",
-        "numvcpus": "1",
+        "memsize": "1024",
+        "numvcpus": "2",
         "scsi0:0.fileName": "disk.vmdk",
         "scsi0:0.present": "TRUE",
         "scsi0:0.redo": ""
