@@ -6,11 +6,6 @@
   "provisioners": [
     {
       "type": "file",
-      "source": "files/VMwareTools-9.4.12-2627939.tar.gz",
-      "destination": "/var/tmp/VMwareTools-9.4.12-2627939.tar.gz"
-    },
-    {
-      "type": "file",
       "source": "files/puppetmaster.conf",
       "destination": "/tmp/puppetmaster.conf"
     },
