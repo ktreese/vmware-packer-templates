@@ -10,6 +10,7 @@ Vagrant.configure("2") do |config|
       vsphere.insecure = true
       vsphere.compute_resource_name = '3031'
       vsphere.template_name = 'Templates/puppetmaster'
+      vsphere.vm_base_path = 'vagrant_deployments'
       vsphere.name = 'vmwpuppetmaster'
       vsphere.vm_base_path = 'vagrant_deployments'
       vsphere.user = 'root'
