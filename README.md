@@ -13,6 +13,8 @@ In order to make use of these packer templates, you'll need to install a few thi
  - Note: This requires [Nokogiri](http://nokogiri.org/)
 - Red Hat Enterprise Linux ISOs, free via [Red Hat Developers](http://developers.redhat.com/downloads/)
 - Credentials to a vSphere instance with proper access to create VMs and other administrative access
+- Enable GuestIPHack (consult [vmware-iso](https://www.packer.io/docs/builders/vmware-iso.html) for detail)
+ - `$ esxcli system settings advanced set -o /Net/GuestIPHack -i 1` 
 - A dummy vagrant vSphere box.  Create a file named `metadata.json` with the following content:
 ```json
 {
@@ -96,6 +98,11 @@ Note: I've hard coded a lot of stuff in the packer templates, such as the `remot
 $ packer validate rhel-server-7-x86_64.json      validate template syntax
 $ packer build rhel-server-7-x86_64.json         build a RedHat 7 vagrant box
 ```
+
+###### Watching The Build
+Packer requires VNC to issue boot commands during a build.  When the VM build is run headless, without a GUI, you can view the screen of the VM by connecting via VNC with the password and IP:port provided in the build output.
+
+The best way to do this on a Mac is to open Safari, and type in `vnc://ipaddress`.  Screen Sharing will open up.  Pin the icon to your dock for future use.  Screen Sharing works beautifully to connect to a VNC server, and it's built right in to MacOS!
 
 ## Making it useful for VMware
 Once the packer build completes, login to your vSphere instance and convert the machine into a vmware template.  Move it to the `Templates` folder, and using the Vagrantfile example above:
