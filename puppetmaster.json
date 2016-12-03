@@ -46,7 +46,7 @@
       "remote_host": "192.168.1.2",
       "remote_username": "root",
       "remote_password": "{{user `vmware_password`}}",
-      "remote_datastore": "SSDstore02",
+      "remote_datastore": "vmstore02_lun",
       "remote_cache_datastore": "isostore",
       "remote_cache_directory": "redhat",
       "keep_registered": "true",
