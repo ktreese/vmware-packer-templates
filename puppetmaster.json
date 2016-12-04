@@ -28,7 +28,7 @@
         "<tab> text ks=http://{{ .HTTPIP }}:{{ .HTTPPort }}/ks.cfg submgr_pass={{ user `submgr_pass` }}<enter><wait>"
       ],
       "boot_wait": "10s",
-      "disk_size": 20480,
+      "disk_size": 30720,
       "guest_os_type": "rhel6-64",
       "headless": true,
       "http_directory": "http",
@@ -46,7 +46,7 @@
       "remote_host": "192.168.1.2",
       "remote_username": "root",
       "remote_password": "{{user `vmware_password`}}",
-      "remote_datastore": "vmstore02_lun",
+      "remote_datastore": "SSDstore02",
       "remote_cache_datastore": "isostore",
       "remote_cache_directory": "redhat",
       "keep_registered": "true",
