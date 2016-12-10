@@ -55,6 +55,8 @@ $ SUB_PASSWORD=vSphere_Password
 $ export SUB_PASSWORD
 ```
 
+Otherwise, edit export.sh and source it before running any vagrant up commands
+
 ## Branch Descriptions
 Each branch represents the OS or application it is named after.  Refer to the usage examples to conduct a build via packer.
 
