@@ -60,7 +60,7 @@ Otherwise, edit export.sh and source it before running any vagrant up commands
 ## Branch Descriptions
 Each branch represents the OS or application it is named after.  Refer to the usage examples to conduct a build via packer.
 
-- `master:` Contains just the README for now.  Each branch is intended to be long lived for the build it represents
+- `master:` Contains the Vagrantfile used to manage deployments of VMs to vCenter. This allows vagrant to serve as the provisioner of lab systems, using the templates created by the other topic branches of this repository.
 
 - `redhat6:` Builds a Red Hat 6 virtual machine based off a 6.8 ISO.  The build applies the latest available patches and package updates (including kernel revisions) via registration with the Red Hat Customer Portal, taking advantage of developer.redhat.com's no-cost Red Hat Enterprise Linux Developer Suite subscription, which includes Red Hat Enterprise Linux Server, and access to the Red Hat Customer Portal for software updates and knowledgebase articles.  This is the same subscription available to enterprise, where the only difference is the no-cost developer suite subscription is self-supported.
 
