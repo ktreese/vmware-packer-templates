@@ -36,7 +36,7 @@ Vagrant.configure("2") do |config|
       vsphere.password = ENV['VSPHERE_PASSWORD']
       vsphere.insecure = true
 
-      vsphere.memory_mb = 4096
+      vsphere.memory_mb = 2048
       vsphere.cpu_count = 2
 
       vsphere.name = 'vmwdnsmasq'
