@@ -13,9 +13,6 @@ CLEANUP_PAUSE=${CLEANUP_PAUSE:-0}
 echo "==> Pausing for ${CLEANUP_PAUSE} seconds..."
 sleep ${CLEANUP_PAUSE}
 
-#echo "==> erasing unused packages to free up space"
-#/usr/bin/yum -y erase freetype
-
 echo "==> Cleaning up yum cache"
 /usr/bin/yum clean all
 
@@ -26,9 +23,6 @@ echo "==> Force logs to rotate"
 echo "==> Clear audit log and wtmp"
 /bin/cat /dev/null > /var/log/audit/audit.log
 /bin/cat /dev/null > /var/log/wtmp
-
-#echo "==> Cleaning up udev rules"
-#/bin/rm -f /etc/udev/rules.d/70*
 
 echo "==> Remove the traces of the template MAC address and UUIDs"
 /bin/sed -i '/^\(HWADDR\|UUID\)=/d' /etc/sysconfig/network-scripts/ifcfg-*
