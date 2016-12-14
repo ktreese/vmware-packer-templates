@@ -10,13 +10,11 @@ run_puppet() {
   done
 }
 
-pe_installer='puppet-enterprise-2016.5.1-el-7-x86_64.tar.gz'
-
 # set IP in /etc/hosts so puppet install succeeds:
 /bin/echo "$(/sbin/ip route get 8.8.8.8 | awk 'NR==1 {print $NF}') $HOSTNAME" >> /etc/hosts
 
-curl -o /home/vagrant/$pe_intaller https://s3.amazonaws.com/pe-builds/released/2016.5.1/$pe_installer
-tar zxvf /home/vagrant/$pe_installer
+curl -o /home/vagrant/puppet-enterprise-2016.5.1-el-7-x86_64.tar.gz https://s3.amazonaws.com/pe-builds/released/2016.5.1/puppet-enterprise-2016.5.1-el-7-x86_64.tar.gz
+tar zxvf /home/vagrant/puppet-enterprise-2016.5.1-el-7-x86_64.tar.gz
 /home/vagrant/puppet-enterprise-2016.5.1-el-7-x86_64/puppet-enterprise-installer -c /tmp/puppetmaster.conf
 
 # autosign all certs
