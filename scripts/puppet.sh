@@ -10,12 +10,14 @@ run_puppet() {
   done
 }
 
+pe_installer='puppet-enterprise-2016.5.1-el-7-x86_64.tar.gz'
+
 # set IP in /etc/hosts so puppet install succeeds:
 /bin/echo "$(/sbin/ip route get 8.8.8.8 | awk 'NR==1 {print $NF}') $HOSTNAME" >> /etc/hosts
 
-curl -o /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz https://s3.amazonaws.com/pe-builds/released/2016.2.1/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz
-tar zxvf /home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64.tar.gz
-/home/vagrant/puppet-enterprise-2016.2.1-el-6-x86_64/puppet-enterprise-installer -c /tmp/puppetmaster.conf
+curl -o /home/vagrant/$pe_intaller https://s3.amazonaws.com/pe-builds/released/2016.5.1/$pe_installer
+tar zxvf /home/vagrant/$pe_installer
+/home/vagrant/puppet-enterprise-2016.5.1-el-7-x86_64/puppet-enterprise-installer -c /tmp/puppetmaster.conf
 
 # autosign all certs
 echo '*' >> /etc/puppetlabs/puppet/autosign.conf
@@ -27,24 +29,6 @@ run_puppet
 /opt/puppetlabs/puppet/bin/gem update r10k
 #/opt/puppetlabs/puppet/bin/gem install puppetclassify
 #/opt/puppetlabs/puppet/bin/gem install mongo
-
-## Setup access to github for root and pe-git; creates .ssh/known_hosts
-#/usr/bin/ssh -oStrictHostKeyChecking=no github.wwt.com
-#/bin/su -lc "ssh -oStrictHostKeyChecking=no github.wwt.com" pe-git
-
-## Copy github keys into pe-git home dir; referenced by r10k.yaml
-#/bin/mv /tmp/id_rsa* /home/pe-git/.ssh
-#/bin/chmod 700 /home/pe-git/.ssh/id_rsa
-
-## Copy temp r10k.yaml in order to deploy production; subsequent puppet run will overwrite via pe_r10k classification
-#/bin/mv /tmp/r10k.yaml /etc/puppetlabs/r10k/r10k.yaml
-#/bin/mv /tmp/hiera.yaml /etc/puppetlabs/puppet/hiera.yaml
-
-## Restart pe-puppetserver for hiera update to take effect
-#/sbin/service pe-puppetserver restart
-
-## Deploy production and vgt environments to puppetmaster
-#/usr/local/bin/r10k deploy environment production -pv -c /etc/puppetlabs/r10k/r10k.yaml
 
 ## Import classifications from MongoDB
 #/opt/puppetlabs/puppet/bin/ruby /etc/puppetlabs/code/environments/production/scripts/classifications.rb -i
