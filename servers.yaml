@@ -23,6 +23,12 @@
   memory_mb: 2048
   cpu_count: 2
   template: redhat7
+- name: devbox02
+  box: vmware/dummy
+  box_url: ./dummy.box
+  memory_mb: 2048
+  cpu_count: 2
+  template: redhat7
 - name: tstbox01
   box: vmware/dummy
   box_url: ./dummy.box
