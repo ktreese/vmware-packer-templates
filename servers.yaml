@@ -11,12 +11,6 @@
   memory_mb: 2048
   cpu_count: 2
   template: redhat7
-- name: vmwdnsmasq01
-  box: vmware/dummy
-  box_url: ./dummy.box
-  memory_mb: 2048
-  cpu_count: 2
-  template: redhat7
 - name: devbox01
   box: vmware/dummy
   box_url: ./dummy.box
@@ -36,6 +30,12 @@
   cpu_count: 2
   template: redhat7
 - name: prdbox01
+  box: vmware/dummy
+  box_url: ./dummy.box
+  memory_mb: 2048
+  cpu_count: 2
+  template: redhat7
+- name: dnsmasq
   box: vmware/dummy
   box_url: ./dummy.box
   memory_mb: 2048
